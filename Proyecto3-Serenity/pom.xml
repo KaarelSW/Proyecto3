@@ -83,6 +83,12 @@
 			<version>3.6.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+		    <groupId>net.serenity-bdd</groupId>
+		    <artifactId>serenity-zalenium</artifactId>
+		    <version>${serenity.version}</version>
+		    <scope>test</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
