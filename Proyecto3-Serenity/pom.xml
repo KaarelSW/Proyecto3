@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ejemplos.testing</groupId>
-	<artifactId>Serenity01b-HolaMundoScreenPlay</artifactId>
+	<artifactId>Proyecto3-Serenity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Serenity01b-HolaMundoScreenPlay</name>
+	<name>Proyecto3-Serenity</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
