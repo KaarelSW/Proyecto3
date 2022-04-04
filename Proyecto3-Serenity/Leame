@@ -1,0 +1,29 @@
+Idea sacada de 
+https://github.com/serenity-bdd/serenity-junit-starter
+
+En este ejercicio modificamos e incluimos Cucumber.
+
+En features están los escenarios
+si quieres provocar un fallo adicional  abre searchForm.java y cambiar el nombre del ID por otro
+#searchInput ==> "buscar" (por ejemplo)
+
+Además, empleamos el patron ScreenPlay. Eso obligar a añadir más elementos
+Fijate en ParamneterDefinitions.java >> fijate como inicializamos "la obra"
+Y ahora fijate en "SearchStepDefinitions" los tres pasos "de la obra"
+
+===========================
+PASOS PARA HACER EL INFORME
+===========================
+
+01) Incluir elementos en el POM
+
+02) Llamar al Runner con el formato *Test (Ej.- WhenSearchingForTermsTest
+
+03) Para ejecutar
+	Bt dcho > Run as > Maven Build
+	En Main > goals escribir   clean verify
+	
+04) Acceder al informe en   target > site > Serenity > Index.html	
+05) Acceder al resumen en   target > site > Serenity > Serenity-summary.html	
+	
+
