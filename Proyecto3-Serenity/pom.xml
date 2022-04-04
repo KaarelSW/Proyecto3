@@ -18,8 +18,8 @@
 		<encoding>UTF-8</encoding>
 		<tags></tags>
 		<webdriver.base.url></webdriver.base.url>
-		<maven.compiler.target>1.11</maven.compiler.target>
-		<maven.compiler.source>1.11</maven.compiler.source>
+		<maven.compiler.target>3.5.1</maven.compiler.target>
+		<maven.compiler.source>3.5.1</maven.compiler.source>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -124,11 +124,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
-				<properties>
- 					<maven.compiler.source>3.8.1</maven.compiler.source>
- 					<maven.compiler.target>3.8.1</maven.compiler.target>
-				</properties>
-
 				<configuration>
 					<source>8</source>
 					<target>8</target>
