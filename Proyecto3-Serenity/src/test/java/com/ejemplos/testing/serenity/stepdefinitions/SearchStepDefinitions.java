@@ -27,7 +27,7 @@ public class SearchStepDefinitions {
     @Given("{actor} is researching things on the internet")
     public void he_is_researching_things_on_the_internet(Actor actor) {
         actor.wasAbleTo(
-        		NavigateTo.theWikipediaHomePage()
+        		NavigateTo.theLucaHomePage()
         );
 		//En el fondo realmente estamos haciendo
 		//  actor.attemptsTo(Open.url(targetUrl:"https://wikipedia.org"));
