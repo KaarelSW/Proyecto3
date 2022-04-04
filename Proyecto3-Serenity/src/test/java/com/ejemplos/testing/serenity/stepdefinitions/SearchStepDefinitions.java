@@ -23,12 +23,14 @@ import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
 //Añadimos lo de nuestro .feature
 public class SearchStepDefinitions {
 
+	//Al indica el actor, parece realmente el punto de vista del usuario
     @Given("{actor} is researching things on the internet")
     public void he_is_researching_things_on_the_internet(Actor actor) {
         actor.wasAbleTo(
         		NavigateTo.theLucaHomePage()
         );
-
+		//En el fondo realmente estamos haciendo
+		//  actor.attemptsTo(Open.url(targetUrl:"https://wikipedia.org"));
     }
 
     @When("{actor} looks up {string}")
