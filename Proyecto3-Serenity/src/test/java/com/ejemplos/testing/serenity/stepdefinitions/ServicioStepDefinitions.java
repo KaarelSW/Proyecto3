@@ -18,7 +18,7 @@ public class ServicioStepDefinitions{
     
     }
 
-    @When("el usuario accede sección Servicios")
+    @When("el {actor} accede sección Servicios")
     public void acceder_Seccion_Servicios(Actor actor) {
 		
         actor.attemptsTo(
