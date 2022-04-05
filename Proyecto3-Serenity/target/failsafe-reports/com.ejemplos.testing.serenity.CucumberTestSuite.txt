@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.ejemplos.testing.serenity.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.434 s - in com.ejemplos.testing.serenity.CucumberTestSuite
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 31.055 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
+un usuario accede a la pagina Servicios correctamente.los servicios se muestran en un elemento acordeón  Time elapsed: 6.1 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting .accordion-item that is displayed
+But got: web element is not displayed
+

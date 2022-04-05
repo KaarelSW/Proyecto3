@@ -20,7 +20,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 
-public class GetAllDefinitions{
+public class GetAllStepDefinitions{
 	
 	RequestSpecification request;
 	static String url;
@@ -49,7 +49,7 @@ public class GetAllDefinitions{
         url = props.getProperty("baseurl");
 	}          
     
-//Feature: Consultar todos los empleados
+//Feature: Consultar todos los empleados. Escenario 1
 	
     @Given("^un administrador$")
     public void un_administrador_logueado() throws Exception {
@@ -70,7 +70,7 @@ public class GetAllDefinitions{
     	assertTrue(json instanceof JSONArray);
     }
     
-//Feature: Consultar todos los empleados
+//Feature: Consultar todos los empleados. Escenario 2
 	
     int empleadosEsperados;
     @And("^sabe cuántos empleados existen$")
