@@ -13,9 +13,6 @@ public class ParameterDefinitions {
         return OnStage.theActorCalled(actorName);
     }
 
-    //Normalmente se utiliza tal cual esta aqui escrito
-    //Realmente lo que indicamos es que Serenity coja el control de la herramienta, driver, etc.
-    //    que deje por debajo Selenium, y que Serenity esté por encima
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
