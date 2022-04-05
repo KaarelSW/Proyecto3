@@ -1,8 +1,6 @@
 package com.ejemplos.testing.serenity.stepdefinitions;
 import java.util.List;
-import io.cucumber.java.Before;
 
-import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,18 +8,16 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.Click;
+
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
+
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.targets.Target;
 
 import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
-import com.ejemplos.testing.serenity.tasks.search.LookForInformation;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 
@@ -35,10 +31,32 @@ public class HomeStepDefinitions{
         );
     }
     
+    @Given("un {actor} con discapacidad visual en la sección Home")
+    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor){
+        actor.wasAbleTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
+    
+    @When("ese {actor} navega por la pagina")
+    public void usuario_navega_por_la_pagina(Actor actor) {
+        actor.attemptsTo(
+        		Scroll.to(LucaHomePage.CLIENTES)
+        );
+    }
+    
+    
+    @When("ese {actor} navega por la pagina ")
+    public void ese_usuario_navega_por_la_pagina (Actor actor) {
+        actor.attemptsTo(
+        		Scroll.to(LucaHomePage.DESCRIPCION)
+        );
+    }
+    
     WebDriver driver = Serenity.getDriver();
     String[] urls = new String[5];
     
-    @When("el {actor} clica en todos los links del navbar")
+    @When("ese {actor} clica en todos los links del navbar")
     public void clica_en_links_navbar(Actor actor) {
         for (int i = 0; i < NavBar.NAVBAR_LINKS.length; i++) {
 
@@ -52,10 +70,11 @@ public class HomeStepDefinitions{
 		}
     }
 
-    @When("el {actor} navega por la página")
-    public void navega_por_la_pagina(Actor actor) {
+
+    @When("ese {actor} con discapacidad visual navega por la sección Home")
+    public void usuario_navega_por_la_seccion_home(Actor actor){
         actor.attemptsTo(
-        		Scroll.to(LucaHomePage.CLIENTES)
+        		NavigateTo.theLucaHomePage()
         );
     }
 
@@ -63,13 +82,6 @@ public class HomeStepDefinitions{
     public void visualiza_seccion_de_clientes(Actor actor) {
         actor.attemptsTo(
                 Ensure.that(LucaHomePage.CLIENTES).hasText("Algunos de nuestros clientes")
-        );
-    }
-
-    @When("el {actor} navega por la página ")
-    public void el_usuario_navega_por_la_página (Actor actor) {
-        actor.attemptsTo(
-        		Scroll.to(LucaHomePage.DESCRIPCION)
         );
     }
 
@@ -100,29 +112,9 @@ public class HomeStepDefinitions{
                 Ensure.that(urls[4]).contains("contact")
         );
     }
-    
-    
-    
-    
-    
-    
-        
-    @Given("un {actor} usuario con discapacidad visual en la sección Home")
-    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor) throws Exception {
-        actor.wasAbleTo(
-        		NavigateTo.theLucaHomePage()
-        );
-    }
 
-    @When("el {actor} navega por la sección")
-    public void usuario_navega_por_la_seccion_home(Actor actor) throws Exception{
-        actor.attemptsTo(
-        		NavigateTo.theLucaHomePage()
-        );
-    }
-    
     @Then("puede acceder a los atributos alt de las imágenes")
-    public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes()throws Exception{
+    public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){
     	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {

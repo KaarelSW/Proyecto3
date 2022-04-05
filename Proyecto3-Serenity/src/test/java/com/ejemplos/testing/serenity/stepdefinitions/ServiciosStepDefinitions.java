@@ -32,7 +32,7 @@ import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
  */
 //Añadimos lo de nuestro .feature
 
-public class ServicesStepDefinitions{	
+public class ServiciosStepDefinitions{	
 
     @Given("el {actor} accede a la página Servicios")
     public void usuario_en_la_sección_Home(Actor actor) {
@@ -41,7 +41,7 @@ public class ServicesStepDefinitions{
         );
     }
 
-    @When("{actor} contenido de la página se carga")
+    @When("ese {actor} contenido de la página se carga")
     public void el_contenido_de_la_página_se_carga(Actor actor) {
     	actor.attemptsTo	(
         		Scroll.to(LucaServiciosPage.REDES_SOCIALES_CARD)
@@ -113,22 +113,22 @@ public class ServicesStepDefinitions{
     
     
     
-    @Given("un {actor} con ceguera accede a la pagina Servicios")
-    public void usuario_con_ceguera_accede_a_la_web(Actor actor) throws Exception {
+    @Given("un {actor} con ceguera accede a la pagina servicios")
+    public void usuario_con_ceguera_accede_a_la_pagina_servicios(Actor actor){
         actor.wasAbleTo(
         		NavigateTo.theLucaServicePage()
         );
     }
 
-    @When("el {actor} navega por la sección servicios")
-    public void usuario_navega_por_la_seccion_servicios(Actor actor) throws Exception{
+    @When("ese {actor} con ceguera navega por la pagina servicios")
+    public void el_usuario_con_ceguera_navega_por_la_pagina_servicios(Actor actor){
         actor.attemptsTo(
         		NavigateTo.theLucaServicePage()
         );
     }
     
-    @Then("es capaz de obtener todos los textos alt de los elementos img de la página")
-    public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes()throws Exception{
+    @Then("es capaz de obtener todos los textos alt de los elementos img de la pagina")
+    public void es_capaz_de_obtener_todos_los_textos_alt_de_los_elementos_img_de_la_pagina(){
     	Target cualquierimagen = Target.the("imagenes servicios").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
