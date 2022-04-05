@@ -21,7 +21,7 @@ import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
  * This makes them more flexible and composable, at the cost of being a bit more wordy. 
  */
 //Añadimos lo de nuestro .feature
-public class SearchStepDefinitions {
+public class HomeStepDefinitions{
 
 	//Al indica el actor, parece realmente el punto de vista del usuario
     @Given("{actor} is researching things on the internet")
