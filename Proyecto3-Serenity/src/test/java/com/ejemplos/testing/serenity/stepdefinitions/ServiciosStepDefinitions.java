@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,6 +22,7 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actions.Scroll;
@@ -175,11 +177,13 @@ public class ServiciosStepDefinitions{
     @And("hay un enlace correcto a la página Privacidad")
     public void el_enlace_a_Privacidad_deberia_ser_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
-    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD),
+    			Hit.the(Keys.ENTER).into(Footer.LINK_PRIVACIDAD)
+    	);  
+    	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
     			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad"),
     			NavigateTo.theLucaServicePage()
-    			);  
+    	);  
     }
     
     @And("hay un enlace correcto a la página Terminos")
@@ -189,7 +193,7 @@ public class ServiciosStepDefinitions{
     			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
     			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
     			NavigateTo.theLucaServicePage()
-    			);  
+    	);  
     }
     
     @And("hay un enlace correcto a la página Contacto")
@@ -199,7 +203,7 @@ public class ServiciosStepDefinitions{
     			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
     			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
     			NavigateTo.theLucaServicePage()
-    			);  
+    	);  
     }
     
 }
