@@ -29,3 +29,8 @@ Feature: un usuario accede a la pagina Servicios correctamente
 		Given un usuario con daltonismo accede a la página Servicios
 		When ese usuario con daltonismo navega por la página
 		Then no tiene ningún impedimento respecto a los contrastes de texto-fondo
+		
+	Scenario: los servicios se muestran en un elemento acordeón
+	  Given un usuario accede a la página Servicios
+	  When ese usuario navega por la página
+	  Then se muestra al menos un elemento de tipo acordeón

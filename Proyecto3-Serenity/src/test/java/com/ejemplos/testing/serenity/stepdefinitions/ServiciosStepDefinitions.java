@@ -207,6 +207,13 @@ public class ServiciosStepDefinitions{
     	);  
     }
     
+    @Then("se muestra al menos un elemento de tipo acordeón")
+    public void deberia_mostrar_un_acordeon() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(LucaServicesPage.ACCORDION).isDisplayed()
+        );
+    }
+    
 }
 
 
