@@ -11,7 +11,7 @@ public class NavigateTo {
                 Open.browserOn().the(LucaHomePage.class));
     }
     
-    public static Performable theLucaServicePage() {
+    public static Performable theLucaServicesPage() {
         return Task.where("{0} opens the Lucatic Enterprise services page",
                 Open.browserOn().the(LucaServicesPage.class));
     }

@@ -1,5 +1,6 @@
 package com.ejemplos.testing.serenity.stepdefinitions;
 
+<<<<<<< HEAD
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -9,16 +10,24 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+=======
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+>>>>>>> origin/MA
 
 import com.ejemplos.testing.serenity.tasks.navigation.LucaServicesPage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
+<<<<<<< HEAD
 import com.ejemplos.testing.serenity.tasks.footer.Footer;
 import io.cucumber.java.en.And;
+=======
+>>>>>>> origin/MA
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
+<<<<<<< HEAD
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
@@ -68,11 +77,36 @@ public class ServiciosStepDefinitions{
     @Then("se carga la página Servicios y se muestran los contenidos correctamente")
     public void deberia_cargar_y_mostrar_contenido_correctamente() {
 
+=======
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.ensure.Ensure;
+
+public class ServiciosStepDefinitions{
+
+//Feature: Consultar la página Servicios. Escenario 1
+	
+    @Given("un usuario se encuentra en la web")
+    public void navigate_To_Luca_Service_Page() {
+    
+    }
+
+    @When("ese {actor} accede sección Servicios")
+    public void acceder_Seccion_Servicios(Actor actor) {		
+        actor.attemptsTo(
+                NavigateTo.theLucaServicesPage()
+        );        
+    }
+
+    @Then("se carga la página Servicios y se muestran los contenidos correctamente")
+    public void deberia_cargar_y_mostrar_contenido_correctamente() {
+>>>>>>> origin/MA
     	WebDriver driver = Serenity.getDriver();
     	JavascriptExecutor j = (JavascriptExecutor) driver;
     	Ensure.that(j.executeScript("return document.readyState").toString()).contains("complete");
     	
     }
+<<<<<<< HEAD
         
     @Then("{actor} se muestra una sección de redes sociales")
     public void se_muestra_una_sección_de_redes_sociales(Actor actor) {
@@ -204,8 +238,37 @@ public class ServiciosStepDefinitions{
     			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
     			NavigateTo.theLucaServicePage()
     	);  
+=======
+    
+//Feature: Consultar la página Servicios. Escenario 2
+    
+    @Given("un {actor} accede a la página Servicios")
+    public void acceder_a_la_Pagina_Servicios(Actor actor) {		
+        actor.wasAbleTo(
+                NavigateTo.theLucaServicesPage()
+        );        
+    }
+    
+    @When("el contenido de la página se carga")
+    public void deberia_cargar_correctamente() {
+    	WebDriver driver = Serenity.getDriver();
+    	JavascriptExecutor j = (JavascriptExecutor) driver;
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(j.executeScript("return document.readyState").toString()).contains("complete")    	
+    	);
+    }
+    
+    @Then("se muestra al menos un elemento de tipo acordeón")
+    public void deberia_mostrar_un_acordeon() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(LucaServicesPage.ACCORDION).isDisplayed()
+        );
+>>>>>>> origin/MA
     }
     
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/MA
