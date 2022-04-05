@@ -49,7 +49,7 @@ public class ServiciosStepDefinitions{
 
     @When("ese {actor} accede a la sección Servicios")
     public void acceder_Seccion_Servicios(Actor actor) {
-		
+
         actor.attemptsTo(
                 NavigateTo.theLucaServicePage()
         );
@@ -152,6 +152,7 @@ public class ServiciosStepDefinitions{
     	
     }
     
+
     @Then("no tiene ningún impedimento respecto a los contrastes de texto-fondo")
     public void comprobar_contrastes_() {
     	
@@ -164,7 +165,7 @@ public class ServiciosStepDefinitions{
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("2")
         );
-    	
+
     }
     
     @Then("hay un elemento footer")
