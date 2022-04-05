@@ -23,11 +23,6 @@
 	</properties>
 	<dependencies>
 		<dependency>
-    		<groupId>org.json</groupId>
-    		<artifactId>json</artifactId>
-    		<version>LATEST</version>
-		</dependency>
-		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-core</artifactId>
 			<version>${serenity.version}</version>
@@ -56,12 +51,6 @@
 			<artifactId>serenity-ensure</artifactId>
 			<version>${serenity.version}</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-    		<groupId>net.serenity-bdd</groupId>
-    		<artifactId>serenity-screenplay-rest</artifactId>
-    		<version>${serenity.version}</version>
-    		<scope>test</scope>
 		</dependency>
 		<!-- Es un reemplazo para Log4j -->
 		<dependency>

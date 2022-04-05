@@ -20,7 +20,4 @@ public class LucaServicesPage extends PageObject {
 	
 	public static final Target ICO_YOUTUBE = 
 			Target.the("icono LINKEDIN").locatedBy(".card-body a:nth-child(7)");
-
-	public static final Target ACCORDION = 
-			Target.the("acordeon").locatedBy(".accordion-item");
 }
