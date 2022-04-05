@@ -1,4 +1,4 @@
-Feature: Services page
+Feature: Como usuario quiero poder acceder a la página Servicios de la web para poder visualizar los servicios y productos de la empresa
 
 Scenario: la sección redes sociales funciona correctamente
 	Given el usuario accede a la página Servicios

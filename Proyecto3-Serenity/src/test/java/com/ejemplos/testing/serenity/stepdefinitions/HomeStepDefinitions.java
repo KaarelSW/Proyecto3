@@ -26,13 +26,6 @@ import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 
 public class HomeStepDefinitions{	
 
-    @Given("{actor} en la sección Home")
-    public void usuario_en_la_sección_Home(Actor actor) {
-        actor.wasAbleTo(
-        		NavigateTo.theLucaHomePage()
-        );
-    }
-
     @Given("un {actor} se encuentra en la sección Home")
     public void is_in_home_page(Actor actor) {
         actor.wasAbleTo(
@@ -57,7 +50,7 @@ public class HomeStepDefinitions{
 		}
     }
 
-    @When("{actor} navega por la página")
+    @When("el {actor} navega por la página")
     public void navega_por_la_pagina(Actor actor) {
         actor.attemptsTo(
         		Scroll.to(LucaHomePage.CLIENTES)
@@ -71,7 +64,7 @@ public class HomeStepDefinitions{
         );
     }
 
-    @When("{actor} navega por la página ")
+    @When("el {actor} navega por la página ")
     public void el_usuario_navega_por_la_página (Actor actor) {
         actor.attemptsTo(
         		Scroll.to(LucaHomePage.DESCRIPCION)
