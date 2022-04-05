@@ -23,7 +23,7 @@ public class ServiciosStepDefinitions{
     
     }
 
-    @When("el {actor} accede sección Servicios")
+    @When("ese {actor} accede sección Servicios")
     public void acceder_Seccion_Servicios(Actor actor) {		
         actor.attemptsTo(
                 NavigateTo.theLucaServicesPage()
@@ -40,7 +40,7 @@ public class ServiciosStepDefinitions{
     
 //Feature: Consultar la página Servicios. Escenario 2
     
-    @Given("el {actor} accede a la página Servicios")
+    @Given("un {actor} accede a la página Servicios")
     public void acceder_a_la_Pagina_Servicios(Actor actor) {		
         actor.wasAbleTo(
                 NavigateTo.theLucaServicesPage()
