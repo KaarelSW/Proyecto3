@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.ejemplos.testing.serenity.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 38.045 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
-Search by keyword.Searching for a term with problem  Time elapsed: 3.982 s  <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 57.616 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
+Services page.la sección redes sociales funciona correctamente  Time elapsed: 10.194 s  <<< FAILURE!
 java.lang.AssertionError: 
 
-Expecting article identifier with text value that is equal to: <"Van Gogh">
-But got......................................................: <"Vincent van Gogh">
+Expecting a value that contains: <[twitter]>
+But got........................: <"https://github.com/guirimalo/LucaticEnterprise">
 

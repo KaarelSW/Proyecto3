@@ -6,10 +6,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
+import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 import com.ejemplos.testing.serenity.tasks.search.LookForInformation;
 import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
@@ -21,36 +23,43 @@ import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
  * This makes them more flexible and composable, at the cost of being a bit more wordy. 
  */
 //Añadimos lo de nuestro .feature
-public class HomeStepDefinitions{
 
-	//Al indica el actor, parece realmente el punto de vista del usuario
-    @Given("{actor} is researching things on the internet")
-    public void he_is_researching_things_on_the_internet(Actor actor) {
+public class HomeStepDefinitions{	
+
+    @Given("{actor} en la sección Home")
+    public void usuario_en_la_sección_Home(Actor actor) {
         actor.wasAbleTo(
         		NavigateTo.theLucaHomePage()
         );
-		//En el fondo realmente estamos haciendo
-		//  actor.attemptsTo(Open.url(targetUrl:"https://wikipedia.org"));
     }
 
-    @When("{actor} looks up {string}")
-    public void he_looks_up(Actor actor, String term) {
-		//wasAbleTo y attemptsTo son muy parecidos. 
-		//Realmente es lo mismo, pero cada uno en su sitio  ;-)
+    @When("{actor} navega por la página")
+    public void navega_por_la_pagina(Actor actor) {
         actor.attemptsTo(
-                LookForInformation.about(term)
+        		Scroll.to(LucaHomePage.CLIENTES)
         );
-        //En el fondo realmente estamos haciendo
-        //  Enter.theValue("van Gogh").into(<elemento_web>),
-        //  Click.on(Button)
     }
 
-    @Then("{actor} should see information about {string}")
-    public void he_should_see_information_about(Actor actor, String term) {
+    @Then("{actor} visualiza sección de clientes")
+    public void visualiza_seccion_de_clientes(Actor actor) {
         actor.attemptsTo(
-                Ensure.that(WikipediaArticle.HEADING).hasText(term)
+                Ensure.that(LucaHomePage.CLIENTES).hasText("Algunos de nuestros clientes")
         );
-        //Si no nos hubieran pasado el actor, podriamos recuperarlo
-        //OnStage.theActorInTheSpotlight().attemptsTo(tasks);
     }
+
+    @When("{actor} navega por la página ")
+    public void el_usuario_navega_por_la_página (Actor actor) {
+        actor.attemptsTo(
+        		Scroll.to(LucaHomePage.DESCRIPCION)
+        );
+    }
+
+    @Then("{actor} visualiza descripción y valores de la empresa")
+    public void visualiza_descripción_y_valores_de_la_empresa(Actor actor) {
+        actor.attemptsTo(
+                Ensure.that(LucaHomePage.DESCRIPCION).isDisplayed()
+        );
+    }
+    
+    
 }
