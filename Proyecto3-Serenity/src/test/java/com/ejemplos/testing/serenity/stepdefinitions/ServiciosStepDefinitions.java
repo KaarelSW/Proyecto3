@@ -26,7 +26,7 @@ public class ServiciosStepDefinitions{
     @When("el {actor} accede sección Servicios")
     public void acceder_Seccion_Servicios(Actor actor) {		
         actor.attemptsTo(
-                NavigateTo.theLucaServicePage()
+                NavigateTo.theLucaServicesPage()
         );        
     }
 
@@ -43,7 +43,7 @@ public class ServiciosStepDefinitions{
     @Given("el {actor} accede a la página Servicios")
     public void acceder_a_la_Pagina_Servicios(Actor actor) {		
         actor.wasAbleTo(
-                NavigateTo.theLucaServicePage()
+                NavigateTo.theLucaServicesPage()
         );        
     }
     
