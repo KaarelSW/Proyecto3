@@ -10,7 +10,6 @@ Scenario: la sección Home presenta descripción y valores de la empresa
   When el usuario navega por la página 
   Then usuario visualiza descripción y valores de la empresa
 
-
 Scenario: comprobar que los enlaces del navbar en la sección Home, funcionan.
   Given un usuario se encuentra en la sección Home
   When el usuario clica en todos los links del navbar
