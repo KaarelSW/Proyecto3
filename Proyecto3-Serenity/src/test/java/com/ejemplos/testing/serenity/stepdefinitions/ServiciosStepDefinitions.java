@@ -17,7 +17,7 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
-public class ServicioStepDefinitions{
+public class ServiciosStepDefinitions{
 
 	
     @Given("un usuario se encuentra en la web")
