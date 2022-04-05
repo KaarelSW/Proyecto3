@@ -19,14 +19,20 @@ import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 import com.ejemplos.testing.serenity.tasks.search.LookForInformation;
 import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
-        
+
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 
 
 public class HomeStepDefinitions{	
 
-    @Given("un {actor} se encuentra en la sección Home")
+    @Given("un {actor} accede a la página Home")
     public void is_in_home_page(Actor actor) {
         actor.wasAbleTo(
         		NavigateTo.theLucaHomePage()
@@ -36,7 +42,7 @@ public class HomeStepDefinitions{
     WebDriver driver = Serenity.getDriver();
     String[] urls = new String[5];
     
-    @When("el {actor} clica en todos los links del navbar")
+    @When("ese {actor} clica en todos los links del navbar")
     public void clica_en_links_navbar(Actor actor) {
         for (int i = 0; i < NavBar.NAVBAR_LINKS.length; i++) {
 
@@ -50,10 +56,12 @@ public class HomeStepDefinitions{
 		}
     }
 
-    @When("el {actor} navega por la página")
-    public void navega_por_la_pagina(Actor actor) {
-        actor.attemptsTo(
-        		Scroll.to(LucaHomePage.CLIENTES)
+    @When("ese {actor} navega por la página ")
+    public void ese_usuario_navega_por_la_página (Actor actor) {
+    	
+    	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+    	actor.attemptsTo(
+        		Scroll.to(By.xpath("//h1"))
         );
     }
 
@@ -64,12 +72,7 @@ public class HomeStepDefinitions{
         );
     }
 
-    @When("el {actor} navega por la página ")
-    public void el_usuario_navega_por_la_página (Actor actor) {
-        actor.attemptsTo(
-        		Scroll.to(LucaHomePage.DESCRIPCION)
-        );
-    }
+   
 
     @Then("{actor} visualiza descripción y valores de la empresa")
     public void visualiza_descripción_y_valores_de_la_empresa(Actor actor) {
