@@ -1,8 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: com.ejemplos.testing.serenity.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 57.616 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
-Services page.la sección redes sociales funciona correctamente  Time elapsed: 10.194 s  <<< FAILURE!
+Tests run: 5, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 26.77 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
+Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa.validar que usuario con discapacidad visual puede ver los contenidos de Home  Time elapsed: 0.049 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'un usuario con discapacidad visual en la sección Home' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("un usuario con discapacidad visual en la sección Home")
+public void un_usuario_con_discapacidad_visual_en_la_sección_home() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("navega por la sección")
+public void navega_por_la_sección() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Como usuario quiero poder acceder a la página Servicios de la web para poder visualizar los servicios y productos de la empresa.la sección redes sociales funciona correctamente  Time elapsed: 3.677 s  <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting a value that contains: <[twitter]>

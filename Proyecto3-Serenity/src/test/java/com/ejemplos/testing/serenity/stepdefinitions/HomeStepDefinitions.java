@@ -1,6 +1,7 @@
 package com.ejemplos.testing.serenity.stepdefinitions;
-
+import java.util.List;
 import io.cucumber.java.Before;
+
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -101,16 +102,20 @@ public class HomeStepDefinitions{
     }
     
     
+    
+    
+    
+    
         
-    @Given("con discapacidad en la sección Home")
+    @Given("un {actor} usuario con discapacidad visual en la sección Home")
     public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor) throws Exception {
         actor.wasAbleTo(
         		NavigateTo.theLucaHomePage()
         );
     }
 
-    @When("navega por la sección Home")
-    public void usuario_navega_por_la_seccion_home(Actor actor, String term) throws Exception{
+    @When("el {actor} navega por la sección")
+    public void usuario_navega_por_la_seccion_home(Actor actor) throws Exception{
         actor.attemptsTo(
         		NavigateTo.theLucaHomePage()
         );
@@ -126,4 +131,6 @@ public class HomeStepDefinitions{
     				);
     	}
     }  
+    
+    
 }

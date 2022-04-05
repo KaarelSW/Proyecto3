@@ -13,6 +13,6 @@ public class NavigateTo {
     
     public static Performable theLucaServicePage() {
         return Task.where("{0} opens the Lucatic Enterprise services page",
-                Open.browserOn().the(LucaServicesPage.class));
+                Open.browserOn().the(LucaServiciosPage.class));
     }
 }
