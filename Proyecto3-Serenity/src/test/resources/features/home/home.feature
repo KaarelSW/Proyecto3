@@ -15,3 +15,8 @@ Scenario: comprobar que los enlaces del navbar en la sección Home, funcionan.
   Given un usuario se encuentra en la sección Home
   When el usuario clica en todos los links del navbar
   Then todos los links funcionan y redirigen correctamente
+
+Scenario: validar que usuario con discapacidad visual puede ver los contenidos de Home
+  Given un usuario con discapacidad visual en la sección Home
+  When navega por la sección
+  

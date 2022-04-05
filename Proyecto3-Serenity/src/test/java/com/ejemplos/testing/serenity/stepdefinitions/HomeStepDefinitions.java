@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actions.Click;
@@ -18,8 +19,8 @@ import net.serenitybdd.screenplay.targets.Target;
 import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 import com.ejemplos.testing.serenity.tasks.search.LookForInformation;
-import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
-        
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 
@@ -100,4 +101,29 @@ public class HomeStepDefinitions{
     }
     
     
+        
+    @Given("con discapacidad en la sección Home")
+    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor) throws Exception {
+        actor.wasAbleTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
+
+    @When("navega por la sección Home")
+    public void usuario_navega_por_la_seccion_home(Actor actor, String term) throws Exception{
+        actor.attemptsTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
+    
+    @Then("puede acceder a los atributos alt de las imágenes")
+    public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes()throws Exception{
+    	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
+    	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
+    	for (WebElementFacade imagen : imagenes) {
+    		OnStage.theActorInTheSpotlight().attemptsTo(
+    				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
+    				);
+    	}
+    }  
 }
