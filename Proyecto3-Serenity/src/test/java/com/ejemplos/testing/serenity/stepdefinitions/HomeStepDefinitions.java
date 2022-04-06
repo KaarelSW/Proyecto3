@@ -1,17 +1,17 @@
 package com.ejemplos.testing.serenity.stepdefinitions;
+import java.util.List;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.Click;
+
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
+
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.targets.Target;
 
@@ -39,6 +39,28 @@ public class HomeStepDefinitions{
         );
     }
     
+    @Given("un {actor} con discapacidad visual en la sección Home")
+    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor){
+        actor.wasAbleTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
+    
+    @When("ese {actor} navega por la pagina")
+    public void usuario_navega_por_la_pagina(Actor actor) {
+        actor.attemptsTo(
+        		Scroll.to(LucaHomePage.CLIENTES)
+        );
+    }
+    
+    
+    @When("ese {actor} navega por la pagina ")
+    public void ese_usuario_navega_por_la_pagina (Actor actor) {
+        actor.attemptsTo(
+        		Scroll.to(LucaHomePage.DESCRIPCION)
+        );
+    }
+    
     WebDriver driver = Serenity.getDriver();
     String[] urls = new String[5];
     
@@ -62,6 +84,11 @@ public class HomeStepDefinitions{
     	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
     	actor.attemptsTo(
         		Scroll.to(By.xpath("//h1"))
+
+    @When("ese {actor} con discapacidad visual navega por la sección Home")
+    public void usuario_navega_por_la_seccion_home(Actor actor){
+        actor.attemptsTo(
+        		NavigateTo.theLucaHomePage()
         );
     }
 
@@ -71,8 +98,6 @@ public class HomeStepDefinitions{
                 Ensure.that(LucaHomePage.CLIENTES).hasText("Algunos de nuestros clientes")
         );
     }
-
-   
 
     @Then("{actor} visualiza descripción y valores de la empresa")
     public void visualiza_descripción_y_valores_de_la_empresa(Actor actor) {
@@ -101,6 +126,17 @@ public class HomeStepDefinitions{
                 Ensure.that(urls[4]).contains("contact")
         );
     }
+
+    @Then("puede acceder a los atributos alt de las imágenes")
+    public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){
+    	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
+    	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
+    	for (WebElementFacade imagen : imagenes) {
+    		OnStage.theActorInTheSpotlight().attemptsTo(
+    				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
+    				);
+    	}
+    }  
     
     
 }

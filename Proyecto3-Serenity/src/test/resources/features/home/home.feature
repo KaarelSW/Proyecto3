@@ -14,3 +14,9 @@ Feature: Como usuario quiero poder acceder a la página Home de la web para pode
 	  Given un usuario accede a la página Home
 	  When ese usuario clica en todos los links del navbar
 	  Then todos los links funcionan y redirigen correctamente
+
+Scenario: validar que usuario con discapacidad visual puede ver los contenidos de Home
+  Given un usuario con discapacidad visual en la sección Home
+  When ese usuario con discapacidad visual navega por la sección Home
+  Then puede acceder a los atributos alt de las imágenes
+  
