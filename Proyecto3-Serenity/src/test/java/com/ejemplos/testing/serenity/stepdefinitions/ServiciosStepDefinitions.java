@@ -239,7 +239,6 @@ public class ServiciosStepDefinitions{
     
     @Then("visualiza un barra de navegación")
     public void visualiza_una_barra_de_navegacion() {
-    	System.out.println(driver.getCurrentUrl());
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.that(NavBar.RIGHT_NAVBAR_ITEM).isDisplayed()
         );
@@ -262,6 +261,7 @@ public class ServiciosStepDefinitions{
     
     @And("los enlaces funcionan correctamente")
     public void los_enlaces_funcionan_correctamente() {
+    	
     	OnStage.theActorInTheSpotlight().attemptsTo(
                 Ensure.that(urls[0]).contains("home")
         );
