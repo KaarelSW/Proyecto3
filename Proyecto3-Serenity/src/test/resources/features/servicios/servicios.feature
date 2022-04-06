@@ -31,8 +31,8 @@ Feature: un usuario accede a la pagina Servicios correctamente
 		
 	Scenario: los servicios se muestran en un elemento acordeón
 		Given un usuario accede a la página Servicios
-	  	When ese usuario navega por la página
-	  	Then se muestra al menos un elemento de tipo acordeón
+	  When ese usuario navega por la página
+	  Then se muestra al menos un elemento de tipo acordeón
   
 	Scenario: un usuario con ceguera es capaz de interpretar los contenidos de Servicios
 		Given un usuario con ceguera accede a la página Servicios
