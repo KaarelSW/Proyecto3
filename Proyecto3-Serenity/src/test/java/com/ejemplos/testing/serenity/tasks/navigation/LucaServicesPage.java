@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("https://lucaticenterprise.herokuapp.com/service")
+@DefaultUrl("https://lucaticenterprise.herokuapp.com/service.html")
 public class LucaServicesPage extends PageObject {
 	
 	public static final Target REDES_SOCIALES_CARD = Target.the("tarjeta redes sociales").locatedBy(".card-body");

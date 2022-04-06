@@ -38,3 +38,10 @@ Feature: un usuario accede a la pagina Servicios correctamente
 		Given un usuario con ceguera accede a la página Servicios
 		When ese usuario con ceguera navega por la página
 		Then es capaz de obtener todos los textos alt de los elementos img de la pagina Servicios
+
+	Scenario: los enlaces de la barra de navegación en Servicios son siempre visibles y funcionan correctamente.
+  	Given un usuario accede a la página Servicios
+  	When ese usuario navega por la página
+  	Then visualiza un barra de navegación
+  	And clica en los elementos
+  	And los enlaces funcionan correctamente

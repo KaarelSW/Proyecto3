@@ -14,6 +14,8 @@ import com.ejemplos.testing.serenity.tasks.navigation.LucaServicesPage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
 import com.ejemplos.testing.serenity.tasks.footer.Footer;
+import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -28,7 +30,11 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.ui.Button;
+import net.serenitybdd.screenplay.waits.Wait;
 
 public class ServiciosStepDefinitions{
 
@@ -162,8 +168,11 @@ public class ServiciosStepDefinitions{
     	
     	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
     	
+    	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isEnabled()
+    			).forNoMoreThan(30).seconds());
     	OnStage.theActorInTheSpotlight().attemptsTo(
-    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("2")
+    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
         );
 
     }
@@ -219,7 +228,6 @@ public class ServiciosStepDefinitions{
     	Target cualquierimagen = Target.the("imagenes servicios").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
-    		System.out.println(imagen.getAttribute("alt"));
     		OnStage.theActorInTheSpotlight().attemptsTo(
     				Ensure.that(imagen.getAttribute("alt")).isNotBlank(),
     				Ensure.that(imagen.getAttribute("alt")).isNotEmpty(),
@@ -228,6 +236,49 @@ public class ServiciosStepDefinitions{
     				);
     	}
     }
+    
+    @Then("visualiza un barra de navegación")
+    public void visualiza_una_barra_de_navegacion() {
+    	System.out.println(driver.getCurrentUrl());
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(NavBar.RIGHT_NAVBAR_ITEM).isDisplayed()
+        );
+    }
+    
+    String[] urls = new String[5];
+    @And("clica en los elementos")
+    public void clica_en_los_elementos() {
+    	for (int i = 0; i < NavBar.NAVBAR_LINKS.length; i++) {
+
+    		OnStage.theActorInTheSpotlight().attemptsTo(
+					JavaScriptClick.on(NavBar.NAVBAR_LINKS[i])
+			);
+			urls[i] = driver.getCurrentUrl();
+			OnStage.theActorInTheSpotlight().attemptsTo(
+	        		NavigateTo.theLucaServicePage()
+	        );
+		}
+    }
+    
+    @And("los enlaces funcionan correctamente")
+    public void los_enlaces_funcionan_correctamente() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[0]).contains("home")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[1]).contains("home")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[2]).contains("service")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[3]).contains("equipo")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[4]).contains("contact")
+        );
+    }
+
     
 }
 

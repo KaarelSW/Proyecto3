@@ -1,10 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: com.ejemplos.testing.serenity.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 57.616 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
-Services page.la sección redes sociales funciona correctamente  Time elapsed: 10.194 s  <<< FAILURE!
+Tests run: 14, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 128.646 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
+Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa.validar que usuario con ceguera puede ver los contenidos de Home  Time elapsed: 5.408 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting a value that is a match for: <".*[aeiou].*">
+But got..............................: <"...">
+
+un usuario accede a la pagina Servicios correctamente.los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente.  Time elapsed: 5.644 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting a value that contains: <[privacidad]>
+But got........................: <"https://lucaticenterprise.herokuapp.com/service#!">
+
+un usuario accede a la pagina Servicios correctamente.la sección redes sociales funciona correctamente  Time elapsed: 6.798 s  <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting a value that contains: <[twitter]>
 But got........................: <"https://github.com/guirimalo/LucaticEnterprise">
+
+un usuario accede a la pagina Servicios correctamente.un usuario con daltonismo es capaz de navegar sin problema por la página Servicios  Time elapsed: 10.208 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting fallos contraste with text value that is equal to: <"0">
+But got....................................................: <"2">
 
