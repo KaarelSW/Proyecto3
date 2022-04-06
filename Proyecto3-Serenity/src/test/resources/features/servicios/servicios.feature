@@ -1,4 +1,4 @@
-Feature: un usuario accede a la pagina Servicios correctamente
+Feature: Como usuario quiero poder acceder a la página Servicios de la web para poder visualizar los servicios y productos de la empresa
 
 	Scenario: comprobar que la pagina servicios se carga correctamente
 		Given un usuario se encuentra en la web
