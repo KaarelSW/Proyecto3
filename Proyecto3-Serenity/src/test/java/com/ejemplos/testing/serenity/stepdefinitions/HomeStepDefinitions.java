@@ -121,7 +121,6 @@ public class HomeStepDefinitions{
     	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
-    		System.out.println(imagen.getAttribute("alt"));
     		OnStage.theActorInTheSpotlight().attemptsTo(
     				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
     				);
