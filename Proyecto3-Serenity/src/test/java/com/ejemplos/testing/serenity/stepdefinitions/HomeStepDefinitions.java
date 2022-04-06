@@ -129,7 +129,7 @@ public class HomeStepDefinitions{
     	}
     }  
     
-    @Then("hay un elemento footer	en la página Home")
+    @Then("hay un elemento footer en la página Home")
     public void hay_un_elemento_footer_en_la_pagina_home() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.that(Footer.FOOTER_ITEM).isDisplayed()
@@ -139,10 +139,8 @@ public class HomeStepDefinitions{
     @And("hay un enlace correcto a la página Privacidad de Home")
     public void el_enlace_a_Privacidad_Home_es_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
-    			Hit.the(Keys.ENTER).into(Footer.LINK_PRIVACIDAD)
-    	);  
-    	OnStage.theActorInTheSpotlight().attemptsTo(
-    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp/home.html"),
+    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
     			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad"),
     			NavigateTo.theLucaHomePage()
     	);  
@@ -152,7 +150,7 @@ public class HomeStepDefinitions{
     public void el_enlace_a_Terminos_Home_es_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			JavaScriptClick.on(Footer.LINK_TERMINOS),
-    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp/home.html"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
     			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
     			NavigateTo.theLucaHomePage()
     	);  
@@ -162,7 +160,7 @@ public class HomeStepDefinitions{
     public void el_enlace_a_Contacto_Home_es_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			JavaScriptClick.on(Footer.LINK_CONTACTO),
-    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp/home.html"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
     			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
     			NavigateTo.theLucaHomePage()
     	);  
