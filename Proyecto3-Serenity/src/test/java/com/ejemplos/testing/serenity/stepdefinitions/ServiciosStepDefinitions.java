@@ -28,7 +28,11 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.ui.Button;
+import net.serenitybdd.screenplay.waits.Wait;
 
 public class ServiciosStepDefinitions{
 
@@ -162,8 +166,11 @@ public class ServiciosStepDefinitions{
     	
     	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
     	
+    	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isEnabled()
+    			).forNoMoreThan(30).seconds());
     	OnStage.theActorInTheSpotlight().attemptsTo(
-    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("2")
+    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
         );
 
     }
