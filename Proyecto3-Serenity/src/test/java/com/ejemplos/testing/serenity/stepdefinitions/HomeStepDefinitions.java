@@ -40,27 +40,27 @@ public class HomeStepDefinitions{
         );
     }
 
-    @Given("un {actor} con discapacidad visual se encuentre en la seccion Home")
+    @Given("un {actor} con discapacidad visual en la sección Home")
     public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor) {
         actor.wasAbleTo(
         		NavigateTo.theLucaHomePage()
         );
     }
     
-    @When("ese {actor} navega por la pagina")
+    @When("ese {actor} navega por la página Home")
     public void usuario_navega_por_la_pagina(Actor actor) {
         actor.attemptsTo(
-        		Scroll.to(LucaHomePage.CLIENTES)
+        		NavigateTo.theLucaHomePage()
         );
     }
     
-    
-    @When("ese {actor} navega por la pagina ")
-    public void ese_usuario_navega_por_la_pagina (Actor actor) {
+    @When("ese {actor} con discapacidad visual navega por la sección Home")
+    public void usuario_con_discapacidad_visual_navega_por_la_pagina(Actor actor) {
         actor.attemptsTo(
-        		Scroll.to(LucaHomePage.DESCRIPCION)
+        		NavigateTo.theLucaHomePage()
         );
     }
+   
     
     WebDriver driver = Serenity.getDriver();
     String[] urls = new String[5];
@@ -79,15 +79,6 @@ public class HomeStepDefinitions{
 		}
     }
 
-    @When("ese {actor} navega por la página ")
-    public void ese_usuario_navega_por_la_página (Actor actor) {
-    	
-    	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
-    	actor.attemptsTo(
-        		Scroll.to(By.xpath("//h1"))
-        	
-        );
-    }
 
     @Then("{actor} visualiza sección de clientes")
     public void visualiza_seccion_de_clientes(Actor actor) {
@@ -124,7 +115,7 @@ public class HomeStepDefinitions{
         );
     }
 
-    @Then("es capaz de obtener todos los textos alt de los elementos img de la pagina")
+    @Then("puede acceder a los atributos alt de las imágenes")
     public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){
     	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
@@ -138,15 +129,15 @@ public class HomeStepDefinitions{
     	}
     }  
     
-    @Then("hay un elemento footer")
-    public void deberia_haber_un_elemento_footer() {
+    @Then("hay un elemento footer en la página Home")
+    public void hay_un_elemento_footer_en_home() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.that(Footer.FOOTER_ITEM).isDisplayed()
     	);
     }
     
-    @And("hay un enlace correcto a la página Privacidad")
-    public void el_enlace_a_Privacidad_deberia_ser_correcto() {
+    @And("hay un enlace correcto a la página Privacidad en Home")
+    public void el_enlace_a_Privacidad_home_deberia_ser_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Hit.the(Keys.ENTER).into(Footer.LINK_PRIVACIDAD)
     	);  
@@ -157,8 +148,8 @@ public class HomeStepDefinitions{
     	);  
     }
     
-    @And("hay un enlace correcto a la página Terminos")
-    public void el_enlace_a_Terminos_deberia_ser_correcto() {
+    @And("hay un enlace correcto a la página Terminos en Home")
+    public void el_enlace_a_Terminos_home_deberia_ser_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			JavaScriptClick.on(Footer.LINK_TERMINOS),
     			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
@@ -167,8 +158,8 @@ public class HomeStepDefinitions{
     	);  
     }
     
-    @And("hay un enlace correcto a la página Contacto")
-    public void el_enlace_a_Contacto_deberia_ser_correcto() {
+    @And("hay un enlace correcto a la página Contacto en Home")
+    public void el_enlace_a_Contacto_home_deberia_ser_correcto() {
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			JavaScriptClick.on(Footer.LINK_CONTACTO),
     			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
