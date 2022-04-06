@@ -19,3 +19,8 @@ Feature: Como usuario quiero poder acceder a la página Home de la web para pode
 		Given un usuario con ceguera accede a la página Home
 		When ese usuario con ceguera navega por la página
 		Then es capaz de obtener todos los textos alt de los elementos img de la pagina
+		
+	Scenario: un usuario con daltonismo puede navegar por la sección Home sin problema
+  	Given un usuario accede a la página Home
+  	When ese usuario navega por la página
+  	Then visualiza la página sin problemas de contraste
