@@ -21,3 +21,11 @@ Scenario: validar que usuario con discapacidad visual puede ver los contenidos d
   When ese usuario con discapacidad visual navega por la sección Home
   Then puede acceder a los atributos alt de las imágenes
   
+  
+Scenario: los enlaces del footer son siempre visibles en la página Home y funcionan correctamente.	
+		Given un usuario se encuentra en la seccion Home
+		When ese usuario navega por la página
+		Then hay un elemento footer	
+		And hay un enlace correcto a la página Privacidad
+		And hay un enlace correcto a la página Terminos
+		And hay un enlace correcto a la página Contacto
