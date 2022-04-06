@@ -169,7 +169,7 @@ public class ServiciosStepDefinitions{
     	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
     	
     	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
-    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isEnabled()
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isClickable()
     			).forNoMoreThan(30).seconds());
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
