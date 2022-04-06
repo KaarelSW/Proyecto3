@@ -95,7 +95,7 @@ public class HomeStepDefinitions{
                 Ensure.that(urls[0]).contains("home")
         );
     	OnStage.theActorInTheSpotlight().attemptsTo(
-                Ensure.that(urls[1]).contains("home")
+                Ensure.that(urls[1]).contains("patata")
         );
     	OnStage.theActorInTheSpotlight().attemptsTo(
                 Ensure.that(urls[2]).contains("service")
