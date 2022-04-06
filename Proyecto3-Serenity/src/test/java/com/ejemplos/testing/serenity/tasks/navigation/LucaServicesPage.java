@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 
 @DefaultUrl("https://lucaticenterprise.herokuapp.com/service")
-public class LucaServiciosPage extends PageObject {
+public class LucaServicesPage extends PageObject {
 	
 	public static final Target REDES_SOCIALES_CARD = Target.the("tarjeta redes sociales").locatedBy(".card-body");
 	
@@ -20,4 +20,7 @@ public class LucaServiciosPage extends PageObject {
 	
 	public static final Target ICO_YOUTUBE = 
 			Target.the("icono LINKEDIN").locatedBy(".card-body a:nth-child(7)");
+	
+	public static final Target ACCORDION = 
+			Target.the("acordeon").locatedBy(".accordion-item");
 }

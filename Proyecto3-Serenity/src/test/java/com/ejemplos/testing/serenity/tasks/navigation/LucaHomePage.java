@@ -1,9 +1,6 @@
 package com.ejemplos.testing.serenity.tasks.navigation;
 
-import org.openqa.selenium.By;
-
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 
@@ -17,5 +14,4 @@ public class LucaHomePage extends PageObject {
 	public static final Target DESCRIPCION =  
     		Target.the("descripcion empresa").
     		locatedBy("//h1");
-		
 }

@@ -76,7 +76,6 @@
 			<version>${junit5.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
@@ -84,10 +83,15 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>net.serenity-bdd</groupId>
-		    <artifactId>serenity-zalenium</artifactId>
-		    <version>${serenity.version}</version>
-		    <scope>test</scope>
+	    	<groupId>net.serenity-bdd</groupId>
+	    	<artifactId>serenity-screenplay-rest</artifactId>
+	    	<version>${serenity.version}</version>
+	    	<scope>test</scope>
+		</dependency>
+		<dependency>
+	    	<groupId>org.json</groupId>
+	    	<artifactId>json</artifactId>
+	    	<version>LATEST</version>
 		</dependency>
 	</dependencies>
 	<build>

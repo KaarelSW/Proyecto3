@@ -17,22 +17,23 @@ import net.serenitybdd.screenplay.targets.Target;
 
 import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
+import com.ejemplos.testing.serenity.tasks.search.LookForInformation;
+import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
 
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 
 
 public class HomeStepDefinitions{	
 
-    @Given("un {actor} se encuentra en la sección Home")
+    @Given("un {actor} accede a la página Home")
     public void is_in_home_page(Actor actor) {
-        actor.wasAbleTo(
-        		NavigateTo.theLucaHomePage()
-        );
-    }
-    
-    @Given("un {actor} con discapacidad visual en la sección Home")
-    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor){
         actor.wasAbleTo(
         		NavigateTo.theLucaHomePage()
         );
@@ -70,11 +71,13 @@ public class HomeStepDefinitions{
 		}
     }
 
-
-    @When("ese {actor} con discapacidad visual navega por la sección Home")
-    public void usuario_navega_por_la_seccion_home(Actor actor){
-        actor.attemptsTo(
-        		NavigateTo.theLucaHomePage()
+    @When("ese {actor} navega por la página ")
+    public void ese_usuario_navega_por_la_página (Actor actor) {
+    	
+    	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+    	actor.attemptsTo(
+        		Scroll.to(By.xpath("//h1"))
+        	
         );
     }
 
@@ -113,11 +116,12 @@ public class HomeStepDefinitions{
         );
     }
 
-    @Then("puede acceder a los atributos alt de las imágenes")
+    @Then("es capaz de obtener todos los textos alt de los elementos img de la pagina")
     public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){
     	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
+    		System.out.println(imagen.getAttribute("alt"));
     		OnStage.theActorInTheSpotlight().attemptsTo(
     				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
     				);
