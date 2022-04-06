@@ -122,7 +122,10 @@ public class HomeStepDefinitions{
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
     		OnStage.theActorInTheSpotlight().attemptsTo(
-    				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
+    				Ensure.that(imagen.getAttribute("alt")).isNotBlank(),
+    				Ensure.that(imagen.getAttribute("alt")).isNotEmpty(),
+    				Ensure.that(imagen.getAttribute("alt")).isNotNull(),
+    				Ensure.that(imagen.getAttribute("alt")).matches(".*[aeiou].*")
     				);
     	}
     }  

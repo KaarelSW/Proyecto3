@@ -219,7 +219,6 @@ public class ServiciosStepDefinitions{
     	Target cualquierimagen = Target.the("imagenes servicios").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
-    		System.out.println(imagen.getAttribute("alt"));
     		OnStage.theActorInTheSpotlight().attemptsTo(
     				Ensure.that(imagen.getAttribute("alt")).isNotBlank(),
     				Ensure.that(imagen.getAttribute("alt")).isNotEmpty(),
