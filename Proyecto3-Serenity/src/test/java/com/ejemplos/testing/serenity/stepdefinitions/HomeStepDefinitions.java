@@ -43,22 +43,7 @@ public class HomeStepDefinitions{
         		NavigateTo.theLucaHomePage()
         );
     }
-    /*
-    @When("ese {actor} navega por la pagina")
-    public void usuario_navega_por_la_pagina(Actor actor) {
-        actor.attemptsTo(
-        		Scroll.to(LucaHomePage.CLIENTES)
-        );
-    }
     
-    
-    @When("ese {actor} navega por la pagina ")
-    public void ese_usuario_navega_por_la_pagina (Actor actor) {
-        actor.attemptsTo(
-        		Scroll.to(LucaHomePage.DESCRIPCION)
-        );
-    }
-    */
     WebDriver driver = Serenity.getDriver();
     String[] urls = new String[5];
     
