@@ -214,13 +214,17 @@ public class ServiciosStepDefinitions{
         );
     }
     
-    @Then("es capaz de obtener todos los textos alt de los elementos img de la pagina")
-    public void es_capaz_de_obtener_todos_los_textos_alt_de_los_elementos_img_de_la_pagina(){
+    @Then("es capaz de obtener todos los textos alt de los elementos img de la pagina Servicios")
+    public void es_capaz_de_obtener_todos_los_textos_alt_de_los_elementos_img_de_la_pagina_servicios(){
     	Target cualquierimagen = Target.the("imagenes servicios").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
+    		System.out.println(imagen.getAttribute("alt"));
     		OnStage.theActorInTheSpotlight().attemptsTo(
-    				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
+    				Ensure.that(imagen.getAttribute("alt")).isNotBlank(),
+    				Ensure.that(imagen.getAttribute("alt")).isNotEmpty(),
+    				Ensure.that(imagen.getAttribute("alt")).isNotNull(),
+    				Ensure.that(imagen.getAttribute("alt")).matches(".*[aeiou].*")
     				);
     	}
     }

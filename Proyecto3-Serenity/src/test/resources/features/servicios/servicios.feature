@@ -34,7 +34,7 @@ Feature: un usuario accede a la pagina Servicios correctamente
 	  	When ese usuario navega por la página
 	  	Then se muestra al menos un elemento de tipo acordeón
   
-#	Scenario: un usuario con ceguera es capaz de interpretar los contenidos de Servicios
-#		Given un usuario con ceguera accede a la pagina Servicios
-#		When ese usuario con ceguera navega por la pagina
-#		Then es capaz de obtener todos los textos alt de los elementos img de la pagina
+	Scenario: un usuario con ceguera es capaz de interpretar los contenidos de Servicios
+		Given un usuario con ceguera accede a la página Servicios
+		When ese usuario con ceguera navega por la página
+		Then es capaz de obtener todos los textos alt de los elementos img de la pagina Servicios
