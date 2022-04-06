@@ -26,7 +26,14 @@ Feature: Como usuario quiero poder acceder a la página Home de la web para pode
 		Then es capaz de leer cualquier texto de la página Home
 
 	Scenario: un usuario con daltonismo puede navegar por la sección Home sin problema
-  		Given un usuario accede a la página Home
-  		When ese usuario navega por la página
-  		Then visualiza la página sin problemas de contraste
+  	Given un usuario accede a la página Home
+  	When ese usuario navega por la página
+  	Then visualiza la página sin problemas de contraste
 
+	Scenario: los enlaces del footer son siempre visibles en la página Home y funcionan correctamente.	
+		Given un usuario accede a la página Home
+		When ese usuario navega por la página
+		Then hay un elemento footer en la página Home
+		And hay un enlace correcto a la página Privacidad de Home
+		And hay un enlace correcto a la página Terminos de Home
+		And hay un enlace correcto a la página Contacto de Home

@@ -1,6 +1,7 @@
 package com.ejemplos.testing.serenity.stepdefinitions;
 import java.util.List;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,6 +33,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.ejemplos.testing.serenity.tasks.footer.Footer;
 import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 
 
@@ -130,7 +132,7 @@ public class HomeStepDefinitions{
     	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
     	
     	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
-    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isEnabled()
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isClickable()
     			).forNoMoreThan(30).seconds());
     	OnStage.theActorInTheSpotlight().attemptsTo(
     			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
@@ -148,8 +150,44 @@ public class HomeStepDefinitions{
 			OnStage.theActorInTheSpotlight().attemptsTo(
 	                Ensure.that(tam).isGreaterThan(11)
 	        );
-		}
-    	
+		}    	
+    }
+
+    @Then("hay un elemento footer en la página Home")
+    public void hay_un_elemento_footer_en_la_pagina_home() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(Footer.FOOTER_ITEM).isDisplayed()
+    	);
+    }
+    
+    @And("hay un enlace correcto a la página Privacidad de Home")
+    public void el_enlace_a_Privacidad_Home_es_correcto() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad"),
+    			NavigateTo.theLucaHomePage()
+    	);  
+    }
+    
+    @And("hay un enlace correcto a la página Terminos de Home")
+    public void el_enlace_a_Terminos_Home_es_correcto() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_TERMINOS),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
+    			NavigateTo.theLucaHomePage()
+    	);  
+    }
+    
+    @And("hay un enlace correcto a la página Contacto de Home")
+    public void el_enlace_a_Contacto_Home_es_correcto() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_CONTACTO),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
+    			NavigateTo.theLucaHomePage()
+    	);  
     }
     
 }
