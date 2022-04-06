@@ -14,6 +14,8 @@ import com.ejemplos.testing.serenity.tasks.navigation.LucaServicesPage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
 import com.ejemplos.testing.serenity.tasks.footer.Footer;
+import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -234,6 +236,49 @@ public class ServiciosStepDefinitions{
     				);
     	}
     }
+    
+    @Then("visualiza un barra de navegación")
+    public void visualiza_una_barra_de_navegacion() {
+    	System.out.println(driver.getCurrentUrl());
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(NavBar.RIGHT_NAVBAR_ITEM).isDisplayed()
+        );
+    }
+    
+    String[] urls = new String[5];
+    @And("clica en los elementos")
+    public void clica_en_los_elementos() {
+    	for (int i = 0; i < NavBar.NAVBAR_LINKS.length; i++) {
+
+    		OnStage.theActorInTheSpotlight().attemptsTo(
+					JavaScriptClick.on(NavBar.NAVBAR_LINKS[i])
+			);
+			urls[i] = driver.getCurrentUrl();
+			OnStage.theActorInTheSpotlight().attemptsTo(
+	        		NavigateTo.theLucaServicePage()
+	        );
+		}
+    }
+    
+    @And("los enlaces funcionan correctamente")
+    public void los_enlaces_funcionan_correctamente() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[0]).contains("home")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[1]).contains("home")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[2]).contains("service")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[3]).contains("equipo")
+        );
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Ensure.that(urls[4]).contains("contact")
+        );
+    }
+
     
 }
 
