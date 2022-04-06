@@ -39,13 +39,6 @@ public class HomeStepDefinitions{
         );
     }
     
-    @Given("un {actor} con discapacidad visual en la sección Home")
-    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor){
-        actor.wasAbleTo(
-        		NavigateTo.theLucaHomePage()
-        );
-    }
-    
     @When("ese {actor} navega por la pagina")
     public void usuario_navega_por_la_pagina(Actor actor) {
         actor.attemptsTo(
@@ -84,11 +77,7 @@ public class HomeStepDefinitions{
     	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
     	actor.attemptsTo(
         		Scroll.to(By.xpath("//h1"))
-
-    @When("ese {actor} con discapacidad visual navega por la sección Home")
-    public void usuario_navega_por_la_seccion_home(Actor actor){
-        actor.attemptsTo(
-        		NavigateTo.theLucaHomePage()
+        	
         );
     }
 
@@ -127,11 +116,12 @@ public class HomeStepDefinitions{
         );
     }
 
-    @Then("puede acceder a los atributos alt de las imágenes")
+    @Then("es capaz de obtener todos los textos alt de los elementos img de la pagina")
     public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){
     	Target cualquierimagen = Target.the("imagenes home").locatedBy("//img");
     	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
     	for (WebElementFacade imagen : imagenes) {
+    		System.out.println(imagen.getAttribute("alt"));
     		OnStage.theActorInTheSpotlight().attemptsTo(
     				Ensure.that(imagen.getAttribute("alt")).hasSizeGreaterThan(0)
     				);
