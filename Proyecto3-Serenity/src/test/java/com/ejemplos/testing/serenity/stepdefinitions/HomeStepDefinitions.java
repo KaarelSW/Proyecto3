@@ -39,6 +39,13 @@ public class HomeStepDefinitions{
         		NavigateTo.theLucaHomePage()
         );
     }
+
+    @Given("un {actor} con discapacidad visual se encuentre en la seccion Home")
+    public void usuario_con_discapacidad_visual_en_la_seccion_home(Actor actor) {
+        actor.wasAbleTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
     
     @When("ese {actor} navega por la pagina")
     public void usuario_navega_por_la_pagina(Actor actor) {
