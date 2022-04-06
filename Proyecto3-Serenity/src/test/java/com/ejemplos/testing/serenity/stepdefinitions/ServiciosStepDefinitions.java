@@ -143,8 +143,8 @@ public class ServiciosStepDefinitions{
         );
     }
     
-    @Then("es capaz de leer cualquier texto de la página")
-    public void letra_mayor_11(){
+    @Then("es capaz de leer cualquier texto de la página Servicios")
+    public void letra_mayor_11_Servicios(){
     	
     	//Comprobar que todos los elementos con font-size, esta es mayor de 11
     	Target CUALQUIER_ELEMENTO = Target.the("elementos html").locatedBy("//*");

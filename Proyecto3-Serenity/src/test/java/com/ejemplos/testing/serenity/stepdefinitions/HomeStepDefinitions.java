@@ -38,7 +38,7 @@ public class HomeStepDefinitions{
         		NavigateTo.theLucaHomePage()
         );
     }
-    
+    /*
     @When("ese {actor} navega por la pagina")
     public void usuario_navega_por_la_pagina(Actor actor) {
         actor.attemptsTo(
@@ -53,7 +53,7 @@ public class HomeStepDefinitions{
         		Scroll.to(LucaHomePage.DESCRIPCION)
         );
     }
-    
+    */
     WebDriver driver = Serenity.getDriver();
     String[] urls = new String[5];
     
@@ -130,5 +130,18 @@ public class HomeStepDefinitions{
     	}
     }  
     
+    @Then("es capaz de leer cualquier texto de la página Home")
+    public void letra_mayor_11_Home(){    	
+    	//Comprobar que todos los elementos con font-size, esta es mayor de 11
+    	Target CUALQUIER_ELEMENTO = Target.the("elementos html").locatedBy("//*");
+    	List<WebElementFacade> elements = CUALQUIER_ELEMENTO.resolveAllFor(OnStage.theActorInTheSpotlight());
+    	for (WebElementFacade htmlElement : elements) {
+    		int tam = Integer.parseInt(htmlElement.getCssValue("font-size").split("px")[0].split("\\.")[0]);
+			OnStage.theActorInTheSpotlight().attemptsTo(
+	                Ensure.that(tam).isGreaterThan(11)
+	        );
+		}
+    	
+    }
     
 }

@@ -22,7 +22,7 @@ Feature: un usuario accede a la pagina Servicios correctamente
 	Scenario: un usuario con discapacidad visual leve es capaz de ver los contenidos de Servicios
 		Given un usuario con discapacidad visual leve accede a la página Servicios
 		When ese usuario con discapacidad visual leve navega por la página
-		Then es capaz de leer cualquier texto de la página
+		Then es capaz de leer cualquier texto de la página Servicios
 		
 	Scenario: un usuario con daltonismo es capaz de navegar sin problema por la página Servicios
 		Given un usuario con daltonismo accede a la página Servicios

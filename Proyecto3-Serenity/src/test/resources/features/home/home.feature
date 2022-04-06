@@ -19,3 +19,8 @@ Feature: Como usuario quiero poder acceder a la página Home de la web para pode
 		Given un usuario con ceguera accede a la página Home
 		When ese usuario con ceguera navega por la página
 		Then es capaz de obtener todos los textos alt de los elementos img de la pagina
+		
+	Scenario: un usuario con discapacidad visual leve es capaz de ver los contenidos de Home
+		Given un usuario con discapacidad visual leve accede a la página Home
+		When ese usuario con discapacidad visual leve navega por la página
+		Then es capaz de leer cualquier texto de la página Home
