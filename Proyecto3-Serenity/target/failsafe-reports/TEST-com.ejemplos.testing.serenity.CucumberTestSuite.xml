@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="com.ejemplos.testing.serenity.CucumberTestSuite" time="128.646" tests="14" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="com.ejemplos.testing.serenity.CucumberTestSuite" time="136.707" tests="15" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="webdriver.chrome.driver" value="C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\34603\AppData\Local\Temp\surefire13126192007949840190 2022-04-06T10-37-54_415-jvmRun1 surefire14290606227371690873tmp surefire_017318587046352799157tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\34603\AppData\Local\Temp\surefire9755329543849619329 2022-04-06T11-15-58_191-jvmRun1 surefire8687082064602245462tmp surefire_018091378900236233050tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\34603\Documents\GitHub\Proyecto3\Proyecto3-Serenity\target\test-classes;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-core\3.2.3\serenity-core-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-model\3.2.3\serenity-model-3.2.3.jar;C:\Users\34603\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\34603\.m2\repository\commons-net\commons-net\3.8.0\commons-net-3.8.0.jar;C:\Users\34603\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\34603\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\34603\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\34603\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\34603\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\34603\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\34603\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\34603\.m2\repository\com\google\inject\guice\5.1.0\guice-5.1.0.jar;C:\Users\34603\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\34603\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\34603\.m2\repository\org\jsoup\jsoup\1.14.3\jsoup-1.14.3.jar;C:\Users\34603\.m2\repository\com\thoughtworks\xstream\xstream\1.4.19\xstream-1.4.19.jar;C:\Users\34603\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\34603\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-java\7.2.3\cucumber-java-7.2.3.jar;C:\Users\34603\.m2\repository\com\typesafe\config\1.4.2\config-1.4.2.jar;C:\Users\34603\.m2\repository\org\imgscalr\imgscalr-lib\4.2\imgscalr-lib-4.2.jar;C:\Users\34603\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\34603\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\34603\.m2\repository\io\github\classgraph\classgraph\4.8.138\classgraph-4.8.138.jar;C:\Users\34603\.m2\repository\net\sourceforge\jexcelapi\jxl\2.6.12\jxl-2.6.12.jar;C:\Users\34603\.m2\repository\net\bytebuddy\byte-buddy\1.12.8\byte-buddy-1.12.8.jar;C:\Users\34603\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.8\byte-buddy-agent-1.12.8.jar;C:\Users\34603\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-reports\3.2.3\serenity-reports-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-stats\3.2.3\serenity-stats-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-reports-configuration\3.2.3\serenity-reports-configuration-3.2.3.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-all\0.34.30\flexmark-all-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark\0.34.30\flexmark-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-abbreviation\0.34.30\flexmark-ext-abbreviation-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-admonition\0.34.30\flexmark-ext-admonition-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-anchorlink\0.34.30\flexmark-ext-anchorlink-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-aside\0.34.30\flexmark-ext-aside-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-attributes\0.34.30\flexmark-ext-attributes-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-autolink\0.34.30\flexmark-ext-autolink-0.34.30.jar;C:\Users\34603\.m2\repository\org\nibor\autolink\autolink\0.6.0\autolink-0.6.0.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-definition\0.34.30\flexmark-ext-definition-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-emoji\0.34.30\flexmark-ext-emoji-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-enumerated-reference\0.34.30\flexmark-ext-enumerated-reference-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-escaped-character\0.34.30\flexmark-ext-escaped-character-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-footnotes\0.34.30\flexmark-ext-footnotes-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-issues\0.34.30\flexmark-ext-gfm-issues-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-strikethrough\0.34.30\flexmark-ext-gfm-strikethrough-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-tables\0.34.30\flexmark-ext-gfm-tables-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-tasklist\0.34.30\flexmark-ext-gfm-tasklist-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-gfm-users\0.34.30\flexmark-ext-gfm-users-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-gitlab\0.34.30\flexmark-ext-gitlab-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-front-matter\0.34.30\flexmark-ext-jekyll-front-matter-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-jekyll-tag\0.34.30\flexmark-ext-jekyll-tag-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-media-tags\0.34.30\flexmark-ext-media-tags-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-test-util\0.34.30\flexmark-test-util-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-ins\0.34.30\flexmark-ext-ins-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-xwiki-macros\0.34.30\flexmark-ext-xwiki-macros-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-superscript\0.34.30\flexmark-ext-superscript-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-tables\0.34.30\flexmark-ext-tables-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-toc\0.34.30\flexmark-ext-toc-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-typographic\0.34.30\flexmark-ext-typographic-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-wikilink\0.34.30\flexmark-ext-wikilink-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-yaml-front-matter\0.34.30\flexmark-ext-yaml-front-matter-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-ext-youtube-embedded\0.34.30\flexmark-ext-youtube-embedded-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-formatter\0.34.30\flexmark-formatter-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-html-parser\0.34.30\flexmark-html-parser-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-jira-converter\0.34.30\flexmark-jira-converter-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-pdf-converter\0.34.30\flexmark-pdf-converter-0.34.30.jar;C:\Users\34603\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\0.0.1-RC13\openhtmltopdf-core-0.0.1-RC13.jar;C:\Users\34603\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\0.0.1-RC13\openhtmltopdf-pdfbox-0.0.1-RC13.jar;C:\Users\34603\.m2\repository\org\apache\pdfbox\pdfbox\2.0.8\pdfbox-2.0.8.jar;C:\Users\34603\.m2\repository\org\apache\pdfbox\fontbox\2.0.8\fontbox-2.0.8.jar;C:\Users\34603\.m2\repository\org\apache\pdfbox\xmpbox\2.0.8\xmpbox-2.0.8.jar;C:\Users\34603\.m2\repository\de\rototor\pdfbox\graphics2d\0.12\graphics2d-0.12.jar;C:\Users\34603\.m2\repository\com\openhtmltopdf\openhtmltopdf-rtl-support\0.0.1-RC13\openhtmltopdf-rtl-support-0.0.1-RC13.jar;C:\Users\34603\.m2\repository\com\ibm\icu\icu4j\59.1\icu4j-59.1.jar;C:\Users\34603\.m2\repository\com\openhtmltopdf\openhtmltopdf-jsoup-dom-converter\0.0.1-RC13\openhtmltopdf-jsoup-dom-converter-0.0.1-RC13.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-profile-pegdown\0.34.30\flexmark-profile-pegdown-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-util\0.34.30\flexmark-util-0.34.30.jar;C:\Users\34603\.m2\repository\com\vladsch\flexmark\flexmark-youtrack-converter\0.34.30\flexmark-youtrack-converter-0.34.30.jar;C:\Users\34603\.m2\repository\es\nitaur\markdown\txtmark\0.16\txtmark-0.16.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-report-resources\3.2.3\serenity-report-resources-3.2.3.jar;C:\Users\34603\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\34603\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.2\jackson-core-2.13.2.jar;C:\Users\34603\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.2\jackson-databind-2.13.2.jar;C:\Users\34603\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.2\jackson-annotations-2.13.2.jar;C:\Users\34603\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\34603\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.3\selenium-java-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.3\selenium-devtools-v85-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v97\4.1.3\selenium-devtools-v97-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v98\4.1.3\selenium-devtools-v98-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v99\4.1.3\selenium-devtools-v99-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.3\selenium-opera-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.3\selenium-remote-driver-4.1.3.jar;C:\Users\34603\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\34603\.m2\repository\io\netty\netty-buffer\4.1.75.Final\netty-buffer-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-codec-http\4.1.75.Final\netty-codec-http-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-codec\4.1.75.Final\netty-codec-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-handler\4.1.75.Final\netty-handler-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-common\4.1.75.Final\netty-common-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.75.Final\netty-transport-classes-epoll-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.75.Final\netty-transport-classes-kqueue-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-native-epoll\4.1.75.Final\netty-transport-native-epoll-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.75.Final\netty-transport-native-kqueue-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.75.Final\netty-transport-native-unix-common-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport\4.1.75.Final\netty-transport-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-resolver\4.1.75.Final\netty-resolver-4.1.75.Final.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-api\1.12.0\opentelemetry-api-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-context\1.12.0\opentelemetry-context-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.12.0\opentelemetry-exporter-logging-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.12.0-alpha\opentelemetry-sdk-metrics-1.12.0-alpha.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.12.0-alpha\opentelemetry-sdk-logs-1.12.0-alpha.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.12.0\opentelemetry-sdk-common-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.12.0\opentelemetry-sdk-extension-autoconfigure-spi-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.12.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.12.0-alpha.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.12.0\opentelemetry-sdk-trace-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.12.0\opentelemetry-sdk-1.12.0.jar;C:\Users\34603\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.12.0-alpha\opentelemetry-semconv-1.12.0-alpha.jar;C:\Users\34603\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\34603\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\34603\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\34603\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\34603\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\34603\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\34603\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\34603\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.3\selenium-http-4.1.3.jar;C:\Users\34603\.m2\repository\dev\failsafe\failsafe\3.2.3\failsafe-3.2.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.3\selenium-safari-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.3\selenium-api-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.3\selenium-support-4.1.3.jar;C:\Users\34603\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\34603\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\34603\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.3\selenium-json-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.3\selenium-chrome-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.3\selenium-chromium-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.3\selenium-firefox-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.3\selenium-edge-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.3\selenium-ie-driver-4.1.3.jar;C:\Users\34603\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\34603\.m2\repository\io\appium\java-client\8.0.0\java-client-8.0.0.jar;C:\Users\34603\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\34603\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\34603\.m2\repository\org\aspectj\aspectjweaver\1.9.8\aspectjweaver-1.9.8.jar;C:\Users\34603\.m2\repository\org\codehaus\groovy\groovy\3.0.10\groovy-3.0.10.jar;C:\Users\34603\.m2\repository\net\sf\opencsv\opencsv\2.0\opencsv-2.0.jar;C:\Users\34603\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\34603\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\34603\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\34603\.m2\repository\org\fluentlenium\fluentlenium-core\0.10.2\fluentlenium-core-0.10.2.jar;C:\Users\34603\.m2\repository\io\github\bonigarcia\webdrivermanager\5.1.0\webdrivermanager-5.1.0.jar;C:\Users\34603\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\34603\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\34603\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\34603\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\34603\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\34603\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\34603\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\34603\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\34603\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\34603\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\34603\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\34603\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\34603\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\34603\.m2\repository\com\jhlabs\filters\2.0.235\filters-2.0.235.jar;C:\Users\34603\.m2\repository\com\paulhammant\ngwebdriver\1.1.6\ngwebdriver-1.1.6.jar;C:\Users\34603\.m2\repository\joda-time\joda-time\2.8.2\joda-time-2.8.2.jar;C:\Users\34603\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\34603\.m2\repository\com\google\jimfs\jimfs\1.2\jimfs-1.2.jar;C:\Users\34603\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\34603\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\34603\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\34603\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar;C:\Users\34603\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\34603\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\34603\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\34603\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-cucumber\3.2.3\serenity-cucumber-3.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-core\7.2.3\cucumber-core-7.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-gherkin\7.2.3\cucumber-gherkin-7.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.3\cucumber-gherkin-messages-7.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\34603\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-expressions\15.0.1\cucumber-expressions-15.0.1.jar;C:\Users\34603\.m2\repository\io\cucumber\datatable\7.2.3\datatable-7.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-plugin\7.2.3\cucumber-plugin-7.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\docstring\7.2.3\docstring-7.2.3.jar;C:\Users\34603\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\34603\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\34603\.m2\repository\io\cucumber\cucumber-junit\7.2.3\cucumber-junit-7.2.3.jar;C:\Users\34603\.m2\repository\org\apache\commons\commons-csv\1.5\commons-csv-1.5.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-screenplay\3.2.3\serenity-screenplay-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-screenplay-webdriver\3.2.3\serenity-screenplay-webdriver-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-ensure\3.2.3\serenity-ensure-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-junit\3.2.3\serenity-junit-3.2.3.jar;C:\Users\34603\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.6.0\kotlin-stdlib-1.6.0.jar;C:\Users\34603\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\34603\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.6.0\kotlin-stdlib-common-1.6.0.jar;C:\Users\34603\.m2\repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar;C:\Users\34603\.m2\repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar;C:\Users\34603\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\34603\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.1\junit-platform-launcher-1.8.1.jar;C:\Users\34603\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\34603\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\34603\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\34603\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\34603\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\34603\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\34603\.m2\repository\org\junit\vintage\junit-vintage-engine\5.8.2\junit-vintage-engine-5.8.2.jar;C:\Users\34603\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\34603\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\34603\.m2\repository\org\assertj\assertj-core\3.6.2\assertj-core-3.6.2.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-screenplay-rest\3.2.3\serenity-screenplay-rest-3.2.3.jar;C:\Users\34603\.m2\repository\net\serenity-bdd\serenity-rest-assured\3.2.3\serenity-rest-assured-3.2.3.jar;C:\Users\34603\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\34603\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\34603\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\34603\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\34603\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\34603\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\34603\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\34603\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\34603\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\34603\.m2\repository\org\codehaus\groovy\groovy-json\3.0.10\groovy-json-3.0.10.jar;C:\Users\34603\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.10\groovy-xml-3.0.10.jar;C:\Users\34603\.m2\repository\org\json\json\20220320\json-20220320.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="Al hacer una petición se recibe un objeto JSON" classname="Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa" time="4.75">
-    <system-out><![CDATA[10:38:00.445 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
-10:38:00.837 [main] INFO   - 
+  <testcase name="Al hacer una petición se recibe un objeto JSON" classname="Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa" time="4.964">
+    <system-out><![CDATA[11:16:04.254 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
+11:16:04.667 [main] INFO   - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -78,17 +78,17 @@
  Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
 -------------------------------------------------------------------------------------
 
-10:38:00.845 [main] INFO   - Test Suite Started: Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa
-10:38:00.871 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
-10:38:00.880 [main] INFO   - Test Suite Started: Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa
-10:38:00.881 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:38:00.894 [main] INFO   - Test Suite Started: un usuario accede a la pagina Servicios correctamente
-10:38:00.895 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
-10:38:00.904 [main] INFO   - Test Suite Started: Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa
+11:16:04.675 [main] INFO   - Test Suite Started: Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa
+11:16:04.702 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:04.713 [main] INFO   - Test Suite Started: Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa
+11:16:04.714 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:16:04.727 [main] INFO   - Test Suite Started: un usuario accede a la pagina Servicios correctamente
+11:16:04.728 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
+11:16:04.736 [main] INFO   - Test Suite Started: Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa
 
 Scenario: Al hacer una peticiÃ³n se recibe un objeto JSON &amp#27;[90m# src/test/resources/features/getAll/getAll.feature:3&amp#27;[0m
-10:38:01.095 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
-10:38:01.287 [main] INFO   - 
+11:16:04.921 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
+11:16:05.143 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -99,7 +99,7 @@ Al hacer una petición se recibe un objeto JSON(como-administrador-quiero-poder-
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun administrador&amp#27;[0m                                 &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.GetAllStepDefinitions.un_administrador_logueado()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mhace una peticiÃ³n a la API&amp#27;[0m                        &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.GetAllStepDefinitions.realiza_una_peticion_a_la_API()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mobtiene informaciÃ³n en formato JSON&amp#27;[0m               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.GetAllStepDefinitions.se_obtiene_informacion_en_formato_JSON()&amp#27;[0m
-10:38:05.651 [main] INFO   - 
+11:16:09.696 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -109,11 +109,11 @@ Al hacer una petición se recibe un objeto JSON
 ----------------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="Se lanza una petición que devuelve un número determinado de empleados" classname="Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa" time="1.023">
+  <testcase name="Se lanza una petición que devuelve un número determinado de empleados" classname="Como administrador quiero poder obtener un listado para ver todos los empleados de la empresa" time="0.978">
     <system-out><![CDATA[
 Scenario: Se lanza una peticiÃ³n que devuelve un nÃºmero determinado de empleados &amp#27;[90m# src/test/resources/features/getAll/getAll.feature:8&amp#27;[0m
-10:38:05.683 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
-10:38:05.716 [main] INFO   - 
+11:16:09.729 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/getAll/getAll.feature
+11:16:09.736 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -125,7 +125,7 @@ Se lanza una petición que devuelve un número determinado de empleados(como-adm
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mhace una peticiÃ³n a la API&amp#27;[0m                                               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.GetAllStepDefinitions.realiza_una_peticion_a_la_API()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32msabe cuÃ¡ntos empleados existen&amp#27;[0m                                            &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.GetAllStepDefinitions.conoce_el_numero_de_empleados()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mrecibe la informaciÃ³n de dichos empleados en formato JSON&amp#27;[0m                &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.GetAllStepDefinitions.se_obtiene_informacion__de_todos_los_empleados_en_formato_JSON()&amp#27;[0m
-10:38:06.683 [main] INFO   - 
+11:16:10.684 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -135,13 +135,13 @@ Se lanza una petición que devuelve un número determinado de empleados
 ----------------------------------------------------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="la página Home presenta sección de clientes" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="18.961">
-    <system-out><![CDATA[10:38:06.688 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
-10:38:06.695 [main] INFO   - Test Suite Started: Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa
+  <testcase name="la página Home presenta sección de clientes" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="19.322">
+    <system-out><![CDATA[11:16:10.688 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:10.694 [main] INFO   - Test Suite Started: Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa
 
 Scenario: la pÃ¡gina Home presenta secciÃ³n de clientes &amp#27;[90m# src/test/resources/features/home/home.feature:3&amp#27;[0m
-10:38:06.720 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
-10:38:06.728 [main] INFO   - 
+11:16:10.714 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:10.719 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -149,13 +149,13 @@ Scenario: la pÃ¡gina Home presenta secciÃ³n de clientes &amp#27;[90m# src/te
 
 la página Home presenta sección de clientes(como-usuario-quiero-poder-acceder-a-la-página-home-de-la-web-para-poder-conocer-la-empresa;la-página-home-presenta-sección-de-clientes)
 --------------------------------------------------------------------------------
-10:38:07.573 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:09.644 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:09.689 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:16:11.448 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:16:13.482 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:16:13.529 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Home&amp#27;[0m            &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.is_in_home_page(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m visualiza secciÃ³n de clientes&amp#27;[0m          &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.visualiza_seccion_de_clientes(net.serenitybdd.screenplay.Actor)&amp#27;[0m
-10:38:25.350 [main] INFO   - 
+11:16:29.709 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -164,21 +164,21 @@ la página Home presenta sección de clientes(como-usuario-quiero-poder-acceder-
 la página Home presenta sección de clientes
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 62223
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 58781
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:20 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:16:24 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:20 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:16:24 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="la sección Home presenta descripción y valores de la empresa" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="5.463">
+  <testcase name="la sección Home presenta descripción y valores de la empresa" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="6.172">
     <system-out><![CDATA[
 Scenario: la secciÃ³n Home presenta descripciÃ³n y valores de la empresa &amp#27;[90m# src/test/resources/features/home/home.feature:8&amp#27;[0m
-10:38:25.675 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
-10:38:25.680 [main] INFO   - 
+11:16:30.034 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:30.038 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -186,13 +186,13 @@ Scenario: la secciÃ³n Home presenta descripciÃ³n y valores de la empresa &am
 
 la sección Home presenta descripción y valores de la empresa(como-usuario-quiero-poder-acceder-a-la-página-home-de-la-web-para-poder-conocer-la-empresa;la-sección-home-presenta-descripción-y-valores-de-la-empresa)
 --------------------------------------------------------------------------------
-10:38:25.707 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:25.909 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:25.926 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:16:30.066 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:16:30.278 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:16:30.304 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Home&amp#27;[0m                             &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.is_in_home_page(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                                &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m visualiza descripciÃ³n y valores de la empresa&amp#27;[0m           &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.visualiza_descripciÃ³n_y_valores_de_la_empresa(net.serenitybdd.screenplay.Actor)&amp#27;[0m
-10:38:30.991 [main] INFO   - 
+11:16:36.065 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -201,21 +201,21 @@ la sección Home presenta descripción y valores de la empresa(como-usuario-quie
 la sección Home presenta descripción y valores de la empresa
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 57150
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 52184
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:27 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:16:31 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:27 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:16:31 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="comprobar que los enlaces del navbar en la sección Home funcionan." classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="11.433">
+  <testcase name="comprobar que los enlaces del navbar en la sección Home funcionan." classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="11.37">
     <system-out><![CDATA[
 Scenario: comprobar que los enlaces del navbar en la secciÃ³n Home funcionan. &amp#27;[90m# src/test/resources/features/home/home.feature:13&amp#27;[0m
-10:38:31.139 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
-10:38:31.144 [main] INFO   - 
+11:16:36.207 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:36.211 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -223,13 +223,13 @@ Scenario: comprobar que los enlaces del navbar en la secciÃ³n Home funcionan. 
 
 comprobar que los enlaces del navbar en la sección Home funcionan.(como-usuario-quiero-poder-acceder-a-la-página-home-de-la-web-para-poder-conocer-la-empresa;comprobar-que-los-enlaces-del-navbar-en-la-sección-home-funcionan.)
 --------------------------------------------------------------------------------
-10:38:31.169 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:31.376 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:31.393 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:16:36.243 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:16:36.457 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:16:36.478 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Home&amp#27;[0m                                   &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.is_in_home_page(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m clica en todos los links del navbar&amp#27;[0m                       &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.clica_en_links_navbar(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mtodos los links funcionan y redirigen correctamente&amp#27;[0m                   &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.links_navbar_home_son_correctos()&amp#27;[0m
-10:38:42.436 [main] INFO   - 
+11:16:47.436 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -238,17 +238,17 @@ comprobar que los enlaces del navbar en la sección Home funcionan.(como-usuario
 comprobar que los enlaces del navbar en la sección Home funcionan.
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 65053
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 62209
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:32 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:16:37 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:32 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:16:37 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="validar que usuario con ceguera puede ver los contenidos de Home" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="5.408">
+  <testcase name="validar que usuario con ceguera puede ver los contenidos de Home" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="5.918">
     <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
 Expecting a value that is a match for: <".*[aeiou].*">
@@ -256,8 +256,8 @@ But got..............................: <"...">
 ]]></failure>
     <system-out><![CDATA[
 Scenario: validar que usuario con ceguera puede ver los contenidos de Home        &amp#27;[90m# src/test/resources/features/home/home.feature:18&amp#27;[0m
-10:38:42.569 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
-10:38:42.573 [main] INFO   - 
+11:16:47.575 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:47.579 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -265,9 +265,9 @@ Scenario: validar que usuario con ceguera puede ver los contenidos de Home      
 
 validar que usuario con ceguera puede ver los contenidos de Home(como-usuario-quiero-poder-acceder-a-la-página-home-de-la-web-para-poder-conocer-la-empresa;validar-que-usuario-con-ceguera-puede-ver-los-contenidos-de-home)
 --------------------------------------------------------------------------------
-10:38:42.597 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:42.799 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:42.815 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:16:47.605 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:16:47.805 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:16:47.828 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con ceguera&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Home&amp#27;[0m                            &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.is_in_home_page(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con ceguera&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mes capaz de obtener todos los textos alt de los elementos img de la pagina&amp#27;[0m &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes()&amp#27;[0m
@@ -275,7 +275,7 @@ validar que usuario con ceguera puede ver los contenidos de Home(como-usuario-qu
 Expecting a value that is a match for: <".*[aeiou].*">
 But got..............................: <"...">
 	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:35)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs$accessor$BaNopjsB(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs$accessor$1wtzujAs(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -287,15 +287,15 @@ But got..............................: <"...">
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:196)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:277)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:256)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:197)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:204)
-	at Proyecto3.Serenity@0.0.1-SNAPSHOT/com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(HomeStepDefinitions.java:124)
+	at Proyecto3.Serenity@0.0.1-SNAPSHOT/com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(HomeStepDefinitions.java:129)
 	at âœ½.es capaz de obtener todos los textos alt de los elementos img de la pagina(file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature:21)
 &amp#27;[0m
-10:38:47.839 [main] ERROR  - 
+11:16:53.357 [main] ERROR  - 
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
  |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
@@ -303,26 +303,94 @@ But got..............................: <"...">
 
 validar que usuario con ceguera puede ver los contenidos de Home
 -----------------------------------------------------------------------
-10:38:47.844 [main] ERROR  -     Test failed at step: usuario con ceguera should see a value that is a match for: <".*[aeiou].*">
-10:38:47.845 [main] ERROR  -     Expecting a value that is a match for: <".*[aeiou].*">But got..............................: <"...">
+11:16:53.362 [main] ERROR  -     Test failed at step: usuario con ceguera should see a value that is a match for: <".*[aeiou].*">
+11:16:53.362 [main] ERROR  -     Expecting a value that is a match for: <".*[aeiou].*">But got..............................: <"...">
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 55047
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 54862
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:44 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:16:49 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:44 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:16:49 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="comprobar que la pagina servicios se carga correctamente" classname="un usuario accede a la pagina Servicios correctamente" time="4.028">
-    <system-out><![CDATA[10:38:47.973 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:38:47.978 [main] INFO   - Test Suite Started: un usuario accede a la pagina Servicios correctamente
+  <testcase name="un usuario con daltonismo puede navegar por la sección Home sin problema" classname="Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa" time="8.111">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expecting fallos contraste with text value that is equal to: <"0">
+But got....................................................: <"1">
+]]></failure>
+    <system-out><![CDATA[
+Scenario: un usuario con daltonismo puede navegar por la secciÃ³n Home sin problema &amp#27;[90m# src/test/resources/features/home/home.feature:23&amp#27;[0m
+11:16:53.500 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature
+11:16:53.505 [main] INFO   - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+un usuario con daltonismo puede navegar por la sección Home sin problema(como-usuario-quiero-poder-acceder-a-la-página-home-de-la-web-para-poder-conocer-la-empresa;un-usuario-con-daltonismo-puede-navegar-por-la-sección-home-sin-problema)
+--------------------------------------------------------------------------------
+11:16:53.532 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:16:53.772 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:16:53.802 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Home&amp#27;[0m                                         &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.is_in_home_page(net.serenitybdd.screenplay.Actor)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                                            &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mvisualiza la pÃ¡gina sin problemas de contraste&amp#27;[0m                              &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.comprobar_contrastes()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: 
+Expecting fallos contraste with text value that is equal to: <"0">
+But got....................................................: <"1">
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:35)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs$accessor$1wtzujAs(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:503)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:483)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:457)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:209)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:196)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:277)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:256)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:197)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:204)
+	at Proyecto3.Serenity@0.0.1-SNAPSHOT/com.ejemplos.testing.serenity.stepdefinitions.HomeStepDefinitions.comprobar_contrastes(HomeStepDefinitions.java:150)
+	at âœ½.visualiza la pÃ¡gina sin problemas de contraste(file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/home/home.feature:26)
+&amp#27;[0m
+11:17:01.455 [main] ERROR  - 
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+un usuario con daltonismo puede navegar por la sección Home sin problema
+-----------------------------------------------------------------------
+11:17:01.456 [main] ERROR  -     Test failed at step: usuario should see fallos contraste with text value that is equal to: <"0">
+11:17:01.457 [main] ERROR  -     Expecting fallos contraste with text value that is equal to: <"0">But got....................................................: <"1">
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 50473
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+abr 06, 2022 11:16:54 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+abr 06, 2022 11:16:54 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found exact CDP implementation for version 99
+]]></system-err>
+  </testcase>
+  <testcase name="comprobar que la pagina servicios se carga correctamente" classname="un usuario accede a la pagina Servicios correctamente" time="3.759">
+    <system-out><![CDATA[11:17:01.601 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:01.606 [main] INFO   - Test Suite Started: un usuario accede a la pagina Servicios correctamente
 
 Scenario: comprobar que la pagina servicios se carga correctamente             &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:3&amp#27;[0m
-10:38:47.988 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:38:47.991 [main] INFO   - 
+11:17:01.618 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:01.622 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -331,12 +399,12 @@ Scenario: comprobar que la pagina servicios se carga correctamente             &
 comprobar que la pagina servicios se carga correctamente(un-usuario-accede-a-la-pagina-servicios-correctamente;comprobar-que-la-pagina-servicios-se-carga-correctamente)
 --------------------------------------------------------------------------------
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m se encuentra en la web&amp#27;[0m                                      &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.navigate_To_Luca_Service_Page(net.serenitybdd.screenplay.Actor)&amp#27;[0m
-10:38:48.019 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:48.230 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:48.245 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:01.650 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:01.846 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:01.862 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la secciÃ³n Servicios&amp#27;[0m                               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.acceder_Seccion_Servicios(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mse carga la pÃ¡gina Servicios y se muestran los contenidos correctamente&amp#27;[0m &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.deberia_cargar_y_mostrar_contenido_correctamente()&amp#27;[0m
-10:38:51.890 [main] INFO   - 
+11:17:05.247 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -345,26 +413,26 @@ comprobar que la pagina servicios se carga correctamente(un-usuario-accede-a-la-
 comprobar que la pagina servicios se carga correctamente
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 60626
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 54405
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:49 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:03 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:49 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:03 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente." classname="un usuario accede a la pagina Servicios correctamente" time="5.644">
+  <testcase name="los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente." classname="un usuario accede a la pagina Servicios correctamente" time="9">
     <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
-Expecting a value that contains: <[privacidad]>
-But got........................: <"https://lucaticenterprise.herokuapp.com/service#!">
+Expecting a value that contains: <[lucaticenterprise.herokuapp]>
+But got........................: <"https://academiaqa.com/politica-de-privacidad/">
 ]]></failure>
     <system-out><![CDATA[
 Scenario: los enlaces del footer son siempre visibles en la pÃ¡gina Servicios y funcionan correctamente. &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:8&amp#27;[0m
-10:38:52.023 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:38:52.026 [main] INFO   - 
+11:17:05.379 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:05.381 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -372,19 +440,19 @@ Scenario: los enlaces del footer son siempre visibles en la pÃ¡gina Servicios 
 
 los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente.(un-usuario-accede-a-la-pagina-servicios-correctamente;los-enlaces-del-footer-son-siempre-visibles-en-la-página-servicios-y-funcionan-correctamente.)
 --------------------------------------------------------------------------------
-10:38:52.053 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:52.248 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:52.264 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:05.406 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:05.606 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:05.623 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m                                                         &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                                                                 &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mhay un elemento footer&amp#27;[0m                                                                           &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.deberia_haber_un_elemento_footer()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mhay un enlace correcto a la pÃ¡gina Contacto&amp#27;[0m                                                       &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.el_enlace_a_Contacto_deberia_ser_correcto()&amp#27;[0m
   &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mhay un enlace correcto a la pÃ¡gina Privacidad&amp#27;[0m                                                     &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.el_enlace_a_Privacidad_deberia_ser_correcto()&amp#27;[0m
       &amp#27;[31mjava.lang.AssertionError: 
-Expecting a value that contains: <[privacidad]>
-But got........................: <"https://lucaticenterprise.herokuapp.com/service#!">
+Expecting a value that contains: <[lucaticenterprise.herokuapp]>
+But got........................: <"https://academiaqa.com/politica-de-privacidad/">
 	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:35)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs$accessor$BaNopjsB(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs$accessor$1wtzujAs(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -396,7 +464,7 @@ But got........................: <"https://lucaticenterprise.herokuapp.com/servi
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:196)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:277)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:256)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:197)
@@ -405,7 +473,7 @@ But got........................: <"https://lucaticenterprise.herokuapp.com/servi
 	at âœ½.hay un enlace correcto a la pÃ¡gina Privacidad(file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature:13)
 &amp#27;[0m
   &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mhay un enlace correcto a la pÃ¡gina Terminos&amp#27;[0m                                                       &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.el_enlace_a_Terminos_deberia_ser_correcto()&amp#27;[0m
-10:38:57.530 [main] ERROR  - 
+11:17:14.214 [main] ERROR  - 
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
  |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
@@ -413,20 +481,20 @@ But got........................: <"https://lucaticenterprise.herokuapp.com/servi
 
 los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente.
 -----------------------------------------------------------------------
-10:38:57.531 [main] ERROR  -     Test failed at step: usuario should see a value that contains: <[privacidad]>
-10:38:57.532 [main] ERROR  -     Expecting a value that contains: <[privacidad]>But got........................: <"https://lucaticenterprise.herokuapp.com/service#!">
+11:17:14.215 [main] ERROR  -     Test failed at step: usuario should see a value that contains: <[lucaticenterprise.herokuapp]>
+11:17:14.215 [main] ERROR  -     Expecting a value that contains: <[lucaticenterprise.herokuapp]>But got........................: <"https://academiaqa.com/politica-de-privacidad/">
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 54462
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 62445
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:53 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:06 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:53 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:06 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="la sección redes sociales funciona correctamente" classname="un usuario accede a la pagina Servicios correctamente" time="6.798">
+  <testcase name="la sección redes sociales funciona correctamente" classname="un usuario accede a la pagina Servicios correctamente" time="7.203">
     <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
 Expecting a value that contains: <[twitter]>
@@ -434,8 +502,8 @@ But got........................: <"https://github.com/guirimalo/LucaticEnterpris
 ]]></failure>
     <system-out><![CDATA[
 Scenario: la secciÃ³n redes sociales funciona correctamente    &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:16&amp#27;[0m
-10:38:57.662 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:38:57.666 [main] INFO   - 
+11:17:14.380 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:14.384 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -443,9 +511,9 @@ Scenario: la secciÃ³n redes sociales funciona correctamente    &amp#27;[90m# s
 
 la sección redes sociales funciona correctamente(un-usuario-accede-a-la-pagina-servicios-correctamente;la-sección-redes-sociales-funciona-correctamente)
 --------------------------------------------------------------------------------
-10:38:57.690 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:38:57.879 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:38:57.893 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:14.408 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:14.597 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:14.611 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                       &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m se muestra una secciÃ³n de redes sociales&amp#27;[0m       &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.se_muestra_una_secciÃ³n_de_redes_sociales(net.serenitybdd.screenplay.Actor)&amp#27;[0m
@@ -454,7 +522,7 @@ la sección redes sociales funciona correctamente(un-usuario-accede-a-la-pagina-
 Expecting a value that contains: <[twitter]>
 But got........................: <"https://github.com/guirimalo/LucaticEnterprise">
 	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:35)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs$accessor$BaNopjsB(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs$accessor$1wtzujAs(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -466,7 +534,7 @@ But got........................: <"https://github.com/guirimalo/LucaticEnterpris
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:196)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:277)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:256)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:197)
@@ -474,7 +542,7 @@ But got........................: <"https://github.com/guirimalo/LucaticEnterpris
 	at Proyecto3.Serenity@0.0.1-SNAPSHOT/com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.sus_enlaces_redirigen_correctamente_a_las_redes(ServiciosStepDefinitions.java:112)
 	at âœ½.usuario sus enlaces redirigen correctamente a las redes(file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature:20)
 &amp#27;[0m
-10:39:04.305 [main] ERROR  - 
+11:17:21.451 [main] ERROR  - 
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
  |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
@@ -482,24 +550,24 @@ But got........................: <"https://github.com/guirimalo/LucaticEnterpris
 
 la sección redes sociales funciona correctamente
 -----------------------------------------------------------------------
-10:39:04.305 [main] ERROR  -     Test failed at step: usuario should see a value that contains: <[twitter]>
-10:39:04.306 [main] ERROR  -     Expecting a value that contains: <[twitter]>But got........................: <"https://github.com/guirimalo/LucaticEnterprise">
+11:17:21.452 [main] ERROR  -     Test failed at step: usuario should see a value that contains: <[twitter]>
+11:17:21.453 [main] ERROR  -     Expecting a value that contains: <[twitter]>But got........................: <"https://github.com/guirimalo/LucaticEnterprise">
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 61233
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 58806
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:38:59 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:15 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:38:59 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:15 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="un usuario con discapacidad visual leve es capaz de ver los contenidos de Servicios" classname="un usuario accede a la pagina Servicios correctamente" time="12.429">
+  <testcase name="un usuario con discapacidad visual leve es capaz de ver los contenidos de Servicios" classname="un usuario accede a la pagina Servicios correctamente" time="11.76">
     <system-out><![CDATA[
 Scenario: un usuario con discapacidad visual leve es capaz de ver los contenidos de Servicios &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:22&amp#27;[0m
-10:39:04.460 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:39:04.465 [main] INFO   - 
+11:17:21.582 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:21.585 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -507,13 +575,13 @@ Scenario: un usuario con discapacidad visual leve es capaz de ver los contenidos
 
 un usuario con discapacidad visual leve es capaz de ver los contenidos de Servicios(un-usuario-accede-a-la-pagina-servicios-correctamente;un-usuario-con-discapacidad-visual-leve-es-capaz-de-ver-los-contenidos-de-servicios)
 --------------------------------------------------------------------------------
-10:39:04.489 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:39:04.684 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:39:04.701 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:21.614 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:21.812 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:21.833 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con discapacidad visual leve&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m                  &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con discapacidad visual leve&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                          &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mes capaz de leer cualquier texto de la pÃ¡gina&amp#27;[0m                                          &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.letra_mayor_11()&amp#27;[0m
-10:39:16.750 [main] INFO   - 
+11:17:33.207 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -522,17 +590,17 @@ un usuario con discapacidad visual leve es capaz de ver los contenidos de Servic
 un usuario con discapacidad visual leve es capaz de ver los contenidos de Servicios
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 53421
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 49635
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:39:05 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:22 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:39:05 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:23 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="un usuario con daltonismo es capaz de navegar sin problema por la página Servicios" classname="un usuario accede a la pagina Servicios correctamente" time="10.208">
+  <testcase name="un usuario con daltonismo es capaz de navegar sin problema por la página Servicios" classname="un usuario accede a la pagina Servicios correctamente" time="7.126">
     <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
 Expecting fallos contraste with text value that is equal to: <"0">
@@ -540,8 +608,8 @@ But got....................................................: <"2">
 ]]></failure>
     <system-out><![CDATA[
 Scenario: un usuario con daltonismo es capaz de navegar sin problema por la pÃ¡gina Servicios &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:27&amp#27;[0m
-10:39:16.890 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:39:16.894 [main] INFO   - 
+11:17:33.343 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:33.346 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -549,9 +617,9 @@ Scenario: un usuario con daltonismo es capaz de navegar sin problema por la pÃ�
 
 un usuario con daltonismo es capaz de navegar sin problema por la página Servicios(un-usuario-accede-a-la-pagina-servicios-correctamente;un-usuario-con-daltonismo-es-capaz-de-navegar-sin-problema-por-la-página-servicios)
 --------------------------------------------------------------------------------
-10:39:16.916 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:39:17.114 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:39:17.133 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:33.369 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:33.570 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:33.590 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con daltonismo&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m                               &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con daltonismo&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                                       &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mno tiene ningÃºn impedimento respecto a los contrastes de texto-fondo&amp#27;[0m                  &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.comprobar_contrastes_()&amp#27;[0m
@@ -559,7 +627,7 @@ un usuario con daltonismo es capaz de navegar sin problema por la página Servic
 Expecting fallos contraste with text value that is equal to: <"0">
 But got....................................................: <"2">
 	at net.serenitybdd.screenplay.ensure.PerformableExpectation.performAs(PerformableExpectations.kt:35)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs$accessor$BaNopjsB(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs$accessor$1wtzujAs(Unknown Source)
 	at jdk.internal.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
@@ -570,7 +638,7 @@ But got....................................................: <"2">
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:196)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$oVZfl2Sw.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.ensure.PerformableExpectation$ByteBuddy$GW8zWA6H.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:277)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:256)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:197)
@@ -578,7 +646,7 @@ But got....................................................: <"2">
 	at Proyecto3.Serenity@0.0.1-SNAPSHOT/com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.comprobar_contrastes_(ServiciosStepDefinitions.java:174)
 	at âœ½.no tiene ningÃºn impedimento respecto a los contrastes de texto-fondo(file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature:30)
 &amp#27;[0m
-10:39:26.957 [main] ERROR  - 
+11:17:40.330 [main] ERROR  - 
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
  |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
    | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
@@ -586,24 +654,24 @@ But got....................................................: <"2">
 
 un usuario con daltonismo es capaz de navegar sin problema por la página Servicios
 -----------------------------------------------------------------------
-10:39:26.958 [main] ERROR  -     Test failed at step: usuario con daltonismo should see fallos contraste with text value that is equal to: <"0">
-10:39:26.958 [main] ERROR  -     Expecting fallos contraste with text value that is equal to: <"0">But got....................................................: <"2">
+11:17:40.331 [main] ERROR  -     Test failed at step: usuario con daltonismo should see fallos contraste with text value that is equal to: <"0">
+11:17:40.331 [main] ERROR  -     Expecting fallos contraste with text value that is equal to: <"0">But got....................................................: <"2">
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 55793
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 49853
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:39:18 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:34 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:39:18 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:34 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="los servicios se muestran en un elemento acordeón" classname="un usuario accede a la pagina Servicios correctamente" time="3.856">
+  <testcase name="los servicios se muestran en un elemento acordeón" classname="un usuario accede a la pagina Servicios correctamente" time="4.024">
     <system-out><![CDATA[
 Scenario: los servicios se muestran en un elemento acordeÃ³n &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:32&amp#27;[0m
-10:39:27.100 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:39:27.104 [main] INFO   - 
+11:17:40.471 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:40.473 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -611,13 +679,13 @@ Scenario: los servicios se muestran en un elemento acordeÃ³n &amp#27;[90m# src
 
 los servicios se muestran en un elemento acordeón(un-usuario-accede-a-la-pagina-servicios-correctamente;los-servicios-se-muestran-en-un-elemento-acordeón)
 --------------------------------------------------------------------------------
-10:39:27.127 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:39:27.327 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:39:27.344 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:40.496 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:40.704 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:40.720 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m             &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                     &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mse muestra al menos un elemento de tipo acordeÃ³n&amp#27;[0m     &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.deberia_mostrar_un_acordeon()&amp#27;[0m
-10:39:30.829 [main] INFO   - 
+11:17:44.366 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -626,21 +694,21 @@ los servicios se muestran en un elemento acordeón(un-usuario-accede-a-la-pagina
 los servicios se muestran en un elemento acordeón
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 64323
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 50045
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:39:28 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:41 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:39:28 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:41 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="un usuario con ceguera es capaz de interpretar los contenidos de Servicios" classname="un usuario accede a la pagina Servicios correctamente" time="5.852">
+  <testcase name="un usuario con ceguera es capaz de interpretar los contenidos de Servicios" classname="un usuario accede a la pagina Servicios correctamente" time="6.289">
     <system-out><![CDATA[
 Scenario: un usuario con ceguera es capaz de interpretar los contenidos de Servicios        &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:37&amp#27;[0m
-10:39:30.955 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:39:30.958 [main] INFO   - 
+11:17:44.495 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:44.498 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -648,13 +716,13 @@ Scenario: un usuario con ceguera es capaz de interpretar los contenidos de Servi
 
 un usuario con ceguera es capaz de interpretar los contenidos de Servicios(un-usuario-accede-a-la-pagina-servicios-correctamente;un-usuario-con-ceguera-es-capaz-de-interpretar-los-contenidos-de-servicios)
 --------------------------------------------------------------------------------
-10:39:30.978 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:39:31.171 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:39:31.185 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:44.519 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:44.712 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:44.726 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con ceguera&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m                                 &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario con ceguera&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                                         &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mes capaz de obtener todos los textos alt de los elementos img de la pagina Servicios&amp#27;[0m &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.es_capaz_de_obtener_todos_los_textos_alt_de_los_elementos_img_de_la_pagina_servicios()&amp#27;[0m
-10:39:36.670 [main] INFO   - 
+11:17:50.655 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -663,53 +731,53 @@ un usuario con ceguera es capaz de interpretar los contenidos de Servicios(un-us
 un usuario con ceguera es capaz de interpretar los contenidos de Servicios
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 60487
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 59978
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:39:32 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:45 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:39:32 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:45 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>
-  <testcase name="los enlaces de la barra de navgeación en Servicios son siempre visibles y funcionan correctamente." classname="un usuario accede a la pagina Servicios correctamente" time="12.735">
+  <testcase name="los enlaces de la barra de navegación en Servicios son siempre visibles y funcionan correctamente." classname="un usuario accede a la pagina Servicios correctamente" time="10.861">
     <system-out><![CDATA[
-Scenario: los enlaces de la barra de navgeaciÃ³n en Servicios son siempre visibles y funcionan correctamente. &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:42&amp#27;[0m
-10:39:36.806 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
-10:39:36.809 [main] INFO   - 
+Scenario: los enlaces de la barra de navegaciÃ³n en Servicios son siempre visibles y funcionan correctamente. &amp#27;[90m# src/test/resources/features/servicios/servicios.feature:42&amp#27;[0m
+11:17:50.785 [main] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///C:/Users/34603/Documents/GitHub/Proyecto3/Proyecto3-Serenity/src/test/resources/features/servicios/servicios.feature
+11:17:50.789 [main] INFO   - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
    |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
 
-los enlaces de la barra de navgeación en Servicios son siempre visibles y funcionan correctamente.(un-usuario-accede-a-la-pagina-servicios-correctamente;los-enlaces-de-la-barra-de-navgeación-en-servicios-son-siempre-visibles-y-funcionan-correctamente.)
+los enlaces de la barra de navegación en Servicios son siempre visibles y funcionan correctamente.(un-usuario-accede-a-la-pagina-servicios-correctamente;los-enlaces-de-la-barra-de-navegación-en-servicios-son-siempre-visibles-y-funcionan-correctamente.)
 --------------------------------------------------------------------------------
-10:39:36.829 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
-10:39:37.021 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
-10:39:37.038 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
+11:17:50.811 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Using automatically driver download
+11:17:51.006 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 99.0.4844.51 (resolved driver for Chrome 99)
+11:17:51.021 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\34603\.cache\selenium\chromedriver\win32\99.0.4844.51\chromedriver.exe
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mun &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m accede a la pÃ¡gina Servicios&amp#27;[0m                                                              &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.usuario_en_la_secciÃ³n_Servicio(net.serenitybdd.screenplay.Actor)&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mese &amp#27;[0m&amp#27;[32m&amp#27;[1musuario&amp#27;[0m&amp#27;[32m navega por la pÃ¡gina&amp#27;[0m                                                                      &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.servicios_esta_cargado(net.serenitybdd.screenplay.Actor)&amp#27;[0m
-https://lucaticenterprise.herokuapp.com/service
+https://lucaticenterprise.herokuapp.com/service.html
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mvisualiza un barra de navegaciÃ³n&amp#27;[0m                                                                      &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.visualiza_una_barra_de_navegacion()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mclica en los elementos&amp#27;[0m                                                                                 &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.clica_en_los_elementos()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mlos enlaces funcionan correctamente&amp#27;[0m                                                                    &amp#27;[90m# com.ejemplos.testing.serenity.stepdefinitions.ServiciosStepDefinitions.los_enlaces_funcionan_correctamente()&amp#27;[0m
-10:39:49.420 [main] INFO   - 
+11:18:01.517 [main] INFO   - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
    |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
 
-los enlaces de la barra de navgeación en Servicios son siempre visibles y funcionan correctamente.
+los enlaces de la barra de navegación en Servicios son siempre visibles y funcionan correctamente.
 ----------------------------------------------------------------------
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 60262
+    <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 55158
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 06, 2022 10:39:38 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 06, 2022 11:17:52 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-abr 06, 2022 10:39:38 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 06, 2022 11:17:52 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 99
 ]]></system-err>
   </testcase>

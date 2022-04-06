@@ -24,3 +24,9 @@ Feature: Como usuario quiero poder acceder a la página Home de la web para pode
 		Given un usuario con discapacidad visual leve accede a la página Home
 		When ese usuario con discapacidad visual leve navega por la página
 		Then es capaz de leer cualquier texto de la página Home
+
+	Scenario: un usuario con daltonismo puede navegar por la sección Home sin problema
+  		Given un usuario accede a la página Home
+  		When ese usuario navega por la página
+  		Then visualiza la página sin problemas de contraste
+

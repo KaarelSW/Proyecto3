@@ -10,10 +10,15 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Scroll;
 
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
+import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.ui.Button;
+import net.serenitybdd.screenplay.waits.Wait;
 
 import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
@@ -129,6 +134,24 @@ public class HomeStepDefinitions{
     				);
     	}
     }  
+ 
+    @Then("visualiza la página sin problemas de contraste")
+    public void comprobar_contrastes() {
+    	
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Open.browserOn().url("https://wave.webaim.org/report#/https://lucaticenterprise.herokuapp.com/home.html")
+        );
+    	
+    	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
+    	
+    	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isEnabled()
+    			).forNoMoreThan(30).seconds());
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
+        );
+
+    }
     
     @Then("es capaz de leer cualquier texto de la página Home")
     public void letra_mayor_11_Home(){    	
