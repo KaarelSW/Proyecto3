@@ -29,7 +29,7 @@ Scenario: validar que usuario con discapacidad visual puede ver los contenidos d
 Scenario: los enlaces del footer son siempre visibles en la página Home y funcionan correctamente.	
 	Given un usuario accede a la página Home
 	When ese usuario navega por la página Home
-	Then hay un elemento footer	en la página Home
+	Then hay un elemento footer en la página Home
 	And hay un enlace correcto a la página Privacidad de Home
 	And hay un enlace correcto a la página Terminos de Home
 	And hay un enlace correcto a la página Contacto de Home
