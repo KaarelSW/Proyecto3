@@ -1,0 +1,34 @@
+{
+  "Petición HTTP 5000 usuarios" : {
+    "transaction" : "Petición HTTP 5000 usuarios",
+    "sampleCount" : 5000,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 6120.336800000003,
+    "medianResTime" : 3513.0,
+    "minResTime" : 439.0,
+    "maxResTime" : 21579.0,
+    "pct1ResTime" : 16703.600000000002,
+    "pct2ResTime" : 17220.95,
+    "pct3ResTime" : 18257.909999999996,
+    "throughput" : 158.42337061563322,
+    "receivedKBytesPerSec" : 1705.5265992839263,
+    "sentKBytesPerSec" : 22.123576169956593
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 5000,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 6120.336800000003,
+    "medianResTime" : 3513.0,
+    "minResTime" : 439.0,
+    "maxResTime" : 21579.0,
+    "pct1ResTime" : 16703.600000000002,
+    "pct2ResTime" : 17220.95,
+    "pct3ResTime" : 18257.909999999996,
+    "throughput" : 158.42337061563322,
+    "receivedKBytesPerSec" : 1705.5265992839263,
+    "sentKBytesPerSec" : 22.123576169956593
+  }
+}
