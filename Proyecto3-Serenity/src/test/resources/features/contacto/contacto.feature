@@ -26,3 +26,9 @@ Scenario: un usuario con discapacidad visual leve es capaz de ver el contenido d
   When ese usuario navega por la página Contacto
   Then puede de leer toda la sección correctamente
 		
+
+@TEST_P3Q-103 @TESTSET_P3Q-36 @Web
+Scenario: Un usuario entra a la página Contacto
+  Given un usuario en la página Home
+  When ese usuario hace click en ir a Contacto
+  Then la página Contacto carga correctamente
