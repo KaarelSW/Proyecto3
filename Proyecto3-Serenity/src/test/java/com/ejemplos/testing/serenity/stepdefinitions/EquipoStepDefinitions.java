@@ -41,6 +41,34 @@ public class EquipoStepDefinitions{
 	
 	WebDriver driver = Serenity.getDriver();
 
-	
+    @Given("un {actor} accede a la sección Equipo")
+    public void is_in_team_page(Actor actor) {
+        actor.wasAbleTo(
+        		NavigateTo.theLucaEquipoPage()
+        );
+    }
+    
+    @When("ese {actor} navega por la página Equipo")
+    public void ese_usuario_navega_por_la_página (Actor actor) {
+    	
+    	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+    	actor.attemptsTo(
+        		Scroll.to(By.xpath("//h1"))
+        	
+        );
+    }
+    
+    @Then("es capaz de leer cualquier texto de la página Equipo")
+    public void letra_mayor_11_Equipo(){    	
+    	//Comprobar que todos los elementos con font-size, esta es mayor de 11
+    	Target CUALQUIER_ELEMENTO = Target.the("elementos html").locatedBy("//*");
+    	List<WebElementFacade> elements = CUALQUIER_ELEMENTO.resolveAllFor(OnStage.theActorInTheSpotlight());
+    	for (WebElementFacade htmlElement : elements) {
+    		int tam = Integer.parseInt(htmlElement.getCssValue("font-size").split("px")[0].split("\\.")[0]);
+			OnStage.theActorInTheSpotlight().attemptsTo(
+	                Ensure.that(tam).isGreaterThan(11)
+	        );
+		}    	
+    }
 
 }
