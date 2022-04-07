@@ -9,9 +9,6 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -27,14 +24,12 @@ import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ejemplos.testing.serenity.tasks.footer.Footer;
+import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 import com.ejemplos.testing.serenity.tasks.navigation.LucaEquipoPage;
-import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
 
@@ -123,6 +118,42 @@ public class EquipoStepDefinitions{
     	);
     }
     
+    @Then("visualiza una barra de navegación en la página Equipo")
+    public void visualiza_una_barra_de_navegacion_en_Equipo() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(NavBar.RIGHT_NAVBAR_ITEM).isDisplayed()
+        );
+    }
+    
+    @And("hay un enlace correcto a la página Privacidad de Equipo")
+    public void el_enlace_a_Privacidad_deberia_ser_correcto_en_Equipo() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad"),
+    			NavigateTo.theLucaServicePage()
+    	);  
+    }
+    
+    @And("hay un enlace correcto a la página Terminos de Equipo")
+    public void el_enlace_a_Terminos_deberia_ser_correcto_en_Equipo() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_TERMINOS),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
+    			NavigateTo.theLucaServicePage()
+    	);  
+    }
+    
+    @And("hay un enlace correcto a la página Contacto de Equipo")
+    public void el_enlace_a_Contacto_deberia_ser_correcto_en_Equipo() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_CONTACTO),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
+    			NavigateTo.theLucaServicePage()
+    	);  
+    }
 
     @Then("es capaz obtener todos textos alt de los elementos img de la página equipo")
     public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){

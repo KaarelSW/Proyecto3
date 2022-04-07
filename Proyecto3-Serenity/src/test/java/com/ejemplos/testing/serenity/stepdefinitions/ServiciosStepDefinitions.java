@@ -23,7 +23,6 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Open;

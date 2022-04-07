@@ -37,3 +37,12 @@ Scenario: La información sobre el equipo de desarrolladores se muestra
   Given un usuario accede a la sección Equipo
   When ese usuario navega por la página Equipo
   Then se muestra la sección con la información del Equipo
+  
+@TEST_P3Q-118 @TESTSET_P3Q-14 @Web  
+Scenario: los enlaces de la barra de navegación son siempre visibles en la página Equipo y funcionan correctamente
+  Given un usuario accede a la sección Equipo
+  When ese usuario navega por la página Equipo
+  Then visualiza una barra de navegación en la página Equipo
+	And hay un enlace correcto a la página Privacidad de Equipo
+	And hay un enlace correcto a la página Terminos de Equipo	
+	And hay un enlace correcto a la página Contacto de Equipo
