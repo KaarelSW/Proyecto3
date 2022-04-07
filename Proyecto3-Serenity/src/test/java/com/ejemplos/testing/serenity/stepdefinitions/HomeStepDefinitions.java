@@ -23,8 +23,6 @@ import net.serenitybdd.screenplay.waits.Wait;
 
 import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
-import com.ejemplos.testing.serenity.tasks.search.LookForInformation;
-import com.ejemplos.testing.serenity.tasks.search.WikipediaArticle;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
