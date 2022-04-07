@@ -1,26 +1,80 @@
 -------------------------------------------------------------------------------
 Test set: com.ejemplos.testing.serenity.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 128.646 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
-Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa.validar que usuario con ceguera puede ver los contenidos de Home  Time elapsed: 5.408 s  <<< FAILURE!
+Tests run: 161, Failures: 18, Errors: 0, Skipped: 0, Time elapsed: 353.974 s <<< FAILURE! - in com.ejemplos.testing.serenity.CucumberTestSuite
+Como usuario quiero poder acceder al formulario en la página Contacto para enviar una solicitud a la empresa.Un usuario en la página de contacto visualiza los términos de uso  Time elapsed: 5.075 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting a value that contains: <[privacidad]>
+But got........................: <"https://lucaticenterprise.herokuapp.com/contact.html#!">
+
+Como usuario quiero poder acceder al formulario en la página Contacto para enviar una solicitud a la empresa.un usuario con daltonismo es capaz de navegar sin problema por la página Contacto  Time elapsed: 9.63 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting fallos contraste with text value that is equal to: <"0">
+But got....................................................: <"1">
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #1  Time elapsed: 0.755 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #2  Time elapsed: 0.757 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #3  Time elapsed: 0.991 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #4  Time elapsed: 0.823 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #5  Time elapsed: 0.792 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #6  Time elapsed: 0.753 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #7  Time elapsed: 0.784 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #8  Time elapsed: 0.822 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #9  Time elapsed: 0.773 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como administrador quiero poder obtener los datos de un empleado específico para consultar la información de éste.Al pedir los datos de un empleado se devuelven todos los datos de ese empleado #10  Time elapsed: 0.784 s  <<< FAILURE!
+java.lang.AssertionError
+
+Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa.validar que usuario con ceguera puede ver los contenidos de Home  Time elapsed: 7.378 s  <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting a value that is a match for: <".*[aeiou].*">
 But got..............................: <"...">
 
-un usuario accede a la pagina Servicios correctamente.los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente.  Time elapsed: 5.644 s  <<< FAILURE!
+Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa.un usuario con daltonismo puede navegar por la sección Home sin problema  Time elapsed: 13.677 s  <<< FAILURE!
 java.lang.AssertionError: 
 
-Expecting a value that contains: <[privacidad]>
-But got........................: <"https://lucaticenterprise.herokuapp.com/service#!">
+Expecting fallos contraste with text value that is equal to: <"0">
+But got....................................................: <"1">
 
-un usuario accede a la pagina Servicios correctamente.la sección redes sociales funciona correctamente  Time elapsed: 6.798 s  <<< FAILURE!
+Como usuario quiero poder acceder a la página Home de la web para poder conocer la empresa.los enlaces del footer son siempre visibles en la página Home y funcionan correctamente.  Time elapsed: 11.351 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting a value that contains: <[lucaticenterprise.herokuapp]>
+But got........................: <"https://academiaqa.com/politica-de-privacidad/">
+
+Como usuario quiero poder acceder a la página Servicios de la web para poder visualizar los servicios y productos de la empresa.los enlaces del footer son siempre visibles en la página Servicios y funcionan correctamente.  Time elapsed: 9.583 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting a value that contains: <[lucaticenterprise.herokuapp]>
+But got........................: <"https://academiaqa.com/politica-de-privacidad/">
+
+Como usuario quiero poder acceder a la página Servicios de la web para poder visualizar los servicios y productos de la empresa.la sección redes sociales funciona correctamente  Time elapsed: 9.181 s  <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting a value that contains: <[twitter]>
 But got........................: <"https://github.com/guirimalo/LucaticEnterprise">
 
-un usuario accede a la pagina Servicios correctamente.un usuario con daltonismo es capaz de navegar sin problema por la página Servicios  Time elapsed: 10.208 s  <<< FAILURE!
+Como usuario quiero poder acceder a la página Servicios de la web para poder visualizar los servicios y productos de la empresa.un usuario con daltonismo es capaz de navegar sin problema por la página Servicios  Time elapsed: 9.805 s  <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting fallos contraste with text value that is equal to: <"0">
