@@ -32,3 +32,7 @@ Scenario: Un usuario entra a la página Contacto
   Given un usuario en la página Home
   When ese usuario hace click en ir a Contacto
   Then la página Contacto carga correctamente
+  
+  
+
+  

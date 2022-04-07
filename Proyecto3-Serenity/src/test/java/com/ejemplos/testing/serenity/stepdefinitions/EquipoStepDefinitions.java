@@ -42,5 +42,54 @@ public class EquipoStepDefinitions{
 	WebDriver driver = Serenity.getDriver();
 
 	
-
+	@Given("un {actor} accede a la página Equipo")
+    public void is_in_home_page(Actor actor) {
+        actor.wasAbleTo(
+        		NavigateTo.theLucaEquipoPage()
+        );
+    }
+	
+	@When("ese {actor} navega por la página Equipo")
+    public void usuario_navega_por_la_pagina(Actor actor) {
+        actor.attemptsTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
+	
+	 @Then("hay un elemento footer en la página Equipo")
+	    public void hay_un_elemento_footer_en_la_pagina_equipo() {
+	    	OnStage.theActorInTheSpotlight().attemptsTo(
+	    			Ensure.that(Footer.FOOTER_ITEM).isDisplayed()
+	    	);
+	    }
+	 
+	 @And("hay un enlace correcto a la página Privacidad de Equipo")
+	    public void el_enlace_a_Privacidad_Equipo_es_correcto() {
+	    	OnStage.theActorInTheSpotlight().attemptsTo(
+	    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD),
+	    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+	    			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad"),
+	    			NavigateTo.theLucaHomePage()
+	    	);  
+	    }
+	 
+	 @And("hay un enlace correcto a la página Terminos de Equipo")
+	    public void el_enlace_a_Terminos_Equipo_es_correcto() {
+	    	OnStage.theActorInTheSpotlight().attemptsTo(
+	    			JavaScriptClick.on(Footer.LINK_TERMINOS),
+	    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+	    			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
+	    			NavigateTo.theLucaHomePage()
+	    	);  
+	    }
+	 
+	 @And("hay un enlace correcto a la página Contacto de Equipo")
+	    public void el_enlace_a_Contacto_Equipo_es_correcto() {
+	    	OnStage.theActorInTheSpotlight().attemptsTo(
+	    			JavaScriptClick.on(Footer.LINK_CONTACTO),
+	    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+	    			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
+	    			NavigateTo.theLucaHomePage()
+	    	);  
+	    }
 }
