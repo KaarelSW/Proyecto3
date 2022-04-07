@@ -38,6 +38,8 @@ import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
 
 public class ContactoStepDefinitions{	
+	
+	WebDriver driver = Serenity.getDriver();
 
 	@Given("un {actor} en la página Contacto")
 	public void un_usuario_en_la_pagina_contacto(Actor actor) {
@@ -73,4 +75,64 @@ public class ContactoStepDefinitions{
 			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty()
 		);
 	}
+
+	
+	@When("clickea en los términos de uso")
+    public void clickea_en_los_teminos_de_uso() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD2)
+		);
+    }
+	
+	@Then("te redirige a la correspondiente página")
+    public void te_redirige() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad")
+    	);
+    }
+	
+	@When("ese {actor} navega por la página Contacto")
+    public void navega_por_la_pagina_contacto(Actor actor) {
+    	
+    	new WebDriverWait(driver, Duration.of(5, ChronoUnit.SECONDS));
+    	actor.attemptsTo(
+        		Scroll.to(By.xpath("//h1"))
+        );
+    }
+	
+	
+	@Then("no tiene ningún impedimento respecto al contraste de texto-fondo")
+    public void comprobar_contrastes_() {
+    	
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Open.browserOn().url("https://wave.webaim.org/report#/https://lucaticenterprise.herokuapp.com/contact.html")
+        );
+    	
+    	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
+    	
+    	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isClickable()
+    			).forNoMoreThan(30).seconds());
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
+        );
+
+    }
+	
+	@Then("puede de leer toda la sección correctamente")
+    public void letra_mayor_11_contacto(){
+    	
+    	Target CUALQUIER_ELEMENTO = Target.the("elementos html").locatedBy("//*");
+    	List<WebElementFacade> elements = CUALQUIER_ELEMENTO.resolveAllFor(OnStage.theActorInTheSpotlight());
+    	for (WebElementFacade htmlElement : elements) {
+    		int tam = Integer.parseInt(htmlElement.getCssValue("font-size").split("px")[0].split("\\.")[0]);
+			OnStage.theActorInTheSpotlight().attemptsTo(
+	                Ensure.that(tam).isGreaterThan(11)
+	        );
+		}
+    	
+    }
+
+
 }
