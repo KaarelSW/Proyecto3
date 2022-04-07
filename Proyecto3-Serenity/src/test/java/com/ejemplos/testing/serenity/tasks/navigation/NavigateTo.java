@@ -21,4 +21,9 @@ public class NavigateTo {
         return Task.where("{0} opens the Lucatic Enterprise contact page",
                 Open.browserOn().the(LucaContactPage.class));
     }
+    
+    public static Performable theLucaEquipoPage() {
+        return Task.where("{0} opens the Lucatic Enterprise team page",
+                Open.browserOn().the(LucaEquipoPage.class));
+    }
 }
