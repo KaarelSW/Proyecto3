@@ -28,12 +28,14 @@ import java.time.temporal.ChronoUnit;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ejemplos.testing.serenity.tasks.footer.Footer;
+import com.ejemplos.testing.serenity.tasks.navbar.NavBar;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
 
@@ -47,6 +49,13 @@ public class ContactoStepDefinitions{
 		);
 	}
     
+	@Given("un {actor} en la página Home")
+    public void is_in_home_page(Actor actor) {
+        actor.wasAbleTo(
+        		NavigateTo.theLucaHomePage()
+        );
+    }
+	
 	@When("redacta el formulario con el campo 'Nombre Completo' vacío")
 	public void dejar_vacio_campo_nombre() {
 		OnStage.theActorInTheSpotlight().attemptsTo(
@@ -57,6 +66,13 @@ public class ContactoStepDefinitions{
 			JavaScriptClick.on(By.id("chekedad")),
 			JavaScriptClick.on(By.id("chekedprivacidad"))			
 		);
+	}
+	
+
+	@When ("ese {actor} hace click en ir a Contacto")
+	public void hace_click_pagina_Contacto(Actor actor) {
+		
+		actor.attemptsTo(JavaScriptClick.on(NavBar.CONTACTO_BUTTON));
 	}
 	
 	@And("hace click en el botón 'Submit'")
@@ -74,4 +90,13 @@ public class ContactoStepDefinitions{
 			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty()
 		);
 	}
+
+	@Then("la página Contacto carga correctamente")
+	public void pagina_Contacto_Carga_Correctamente(){
+		
+		WebDriver driver = Serenity.getDriver();
+    	JavascriptExecutor j = (JavascriptExecutor) driver;
+    	Ensure.that(j.executeScript("return document.readyState").toString()).contains("complete");
+	}
+	
 }
