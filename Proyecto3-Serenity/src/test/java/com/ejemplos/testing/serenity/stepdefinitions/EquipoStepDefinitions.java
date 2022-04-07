@@ -33,6 +33,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ejemplos.testing.serenity.tasks.footer.Footer;
+import com.ejemplos.testing.serenity.tasks.navigation.LucaEquipoPage;
+import com.ejemplos.testing.serenity.tasks.navigation.LucaHomePage;
 import com.ejemplos.testing.serenity.tasks.navigation.NavigateTo;
 
 
@@ -70,5 +72,76 @@ public class EquipoStepDefinitions{
 	        );
 		}    	
     }
+    
+    @Then("no tiene ningún impedimento respecto a los contrastes de texto-fondo en Equipo")
+    public void comprobar_contrastes() {
+    	
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+                Open.browserOn().url("https://wave.webaim.org/report#/https://lucaticenterprise.herokuapp.com/equipo.html")
+        );
+    	
+    	Target FALLOS = Target.the("fallos contraste").located(By.xpath("//*[@id='contrast']/span"));
+    	
+    	OnStage.theActorInTheSpotlight().attemptsTo(Wait.until(
+    			   WebElementQuestion.the(Button.located(By.id("viewdetails"))) , WebElementStateMatchers.isClickable()
+    			).forNoMoreThan(30).seconds());
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(FALLOS.waitingForNoMoreThan(Duration.ofSeconds(5))).hasText("0")
+        );
+    }
+    
+    @Then("se muestra la sección con la información de los principales objetivos de la empresa")
+    public void se_muestra_la_seccion_con_la_informacion_de_la_empresa(){ 
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(LucaEquipoPage.OBJETIVOS).isDisplayed()
+        );
+    }
+    
 
+    @Then("hay un elemento footer en Equipo")
+    public void hay_un_elemento_footer_en_la_pagina_equipo() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(Footer.FOOTER_ITEM).isDisplayed()
+    	);
+    }
+
+    @And("los enlaces del footer de equipo funcionan correctamente")
+    public void los_enlaces_furulan() {
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			JavaScriptClick.on(Footer.LINK_PRIVACIDAD),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("politica-de-privacidad"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("privacidad"),
+    			NavigateTo.theLucaHomePage(),
+    			JavaScriptClick.on(Footer.LINK_TERMINOS),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("terminos"),
+    			NavigateTo.theLucaHomePage(),
+    			JavaScriptClick.on(Footer.LINK_CONTACTO),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("lucaticenterprise.herokuapp"),
+    			Ensure.thatTheCurrentPage().currentUrl().contains("contact"),
+    			NavigateTo.theLucaHomePage()
+    	);
+    }
+    
+
+    @Then("es capaz obtener todos textos alt de los elementos img de la página equipo")
+    public void usuario_puede_acceder_a_los_atributos_alt_de_las_imagenes(){
+    	Target cualquierimagen = Target.the("imagenes equipo").locatedBy("//img");
+    	List <WebElementFacade> imagenes = cualquierimagen.resolveAllFor(OnStage.theActorInTheSpotlight());
+    	for (WebElementFacade imagen : imagenes) {
+    		OnStage.theActorInTheSpotlight().attemptsTo(
+    				Ensure.that(imagen.getAttribute("alt")).isNotBlank(),
+    				Ensure.that(imagen.getAttribute("alt")).isNotEmpty(),
+    				Ensure.that(imagen.getAttribute("alt")).isNotNull(),
+    				Ensure.that(imagen.getAttribute("alt")).matches(".*[aeiou].*")
+    				);
+    	}
+    } 
+    
+    @Then("se muestra la sección con la información del Equipo")
+    public void se_muestra_la_seccion_con_el_equipo__de_la_empresa(){ 
+    	OnStage.theActorInTheSpotlight().attemptsTo(
+    			Ensure.that(LucaEquipoPage.EQUIPO).isDisplayed()
+        );
+    }
 }
