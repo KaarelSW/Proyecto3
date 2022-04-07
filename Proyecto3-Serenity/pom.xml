@@ -180,7 +180,7 @@
 			<plugin>
 				<groupId>net.serenity.maven.plugins</groupId>
 				<artifactId>serenity-maven-plugin</artifactId>
-				<version>${serenity.maven.version}</version>
+				<version>3.1.20</version>
 				<executions>
 					<execution>
 						<id>serenity-reports</id>
