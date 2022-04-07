@@ -68,7 +68,42 @@ public class ContactoStepDefinitions{
 			JavaScriptClick.on(By.id("chekedprivacidad"))			
 		);
 	}
+
+	@When("redacta el formulario con el campo 'Email' vacío")
+	public void dejar_vacio_campo_email() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Juan").into(By.id("nombre")),
+			Enter.theValue("").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("Hola, buenas tardes").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
 	
+	@When("redacta el formulario con el campo 'Teléfono' vacío")
+	public void dejar_vacio_campo_telefono() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Juan").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("").into(By.id("teléfono")),
+			Enter.theValue("Hola, buenas tardes").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
+	
+	@When("redacta el formulario con el campo 'Mensaje' vacío")
+	public void dejar_vacio_campo_mensaje() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Juan").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
 
 	@When ("ese {actor} hace click en ir a Contacto")
 	public void hace_click_pagina_Contacto(Actor actor) {
@@ -83,15 +118,45 @@ public class ContactoStepDefinitions{
 		);
 	}
 	
-	@Then("se muestra una alerta al respecto")
+	@Then("se muestra una alerta sobre nombre vacío")
 	public void alerta_por_nombre_vacio() {
 		Actor actor = OnStage.theActorInTheSpotlight();
 		Target username = Target.the("validacion").located(By.id("nombre"));
 		actor.attemptsTo(
-			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty()
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
 		);
 	}
-
+	
+	@Then("se muestra una alerta sobre email vacío")
+	public void alerta_por_email_vacio() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("email"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra una alerta sobre teléfono vacío")
+	public void alerta_por_telefono_vacio() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("teléfono"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra una alerta sobre mensaje vacío")
+	public void alerta_por_mensaje_vacio() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("mensaje"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
 	
 	@When("clickea en los términos de uso")
     public void clickea_en_los_teminos_de_uso() {
