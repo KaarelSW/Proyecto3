@@ -104,7 +104,93 @@ public class ContactoStepDefinitions{
 			JavaScriptClick.on(By.id("chekedprivacidad"))			
 		);
 	}
+	
+	@When("rellena el formulario sin aceptar las políticas de privacidad")
+	public void no_aceptar_politicas_de_privacidad() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Juan").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("A los buenos días").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad"))		
+		);
+	}
+	
+	@When("rellena el formulario sin seleccionar que es mayor de edad")
+	public void no_marcar_mayoria_edad() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Juan").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("A los buenos días").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))		
+		);
+	}
+	
+	@When("rellena el formulario poniendo menos de 3 caracteres en el campo 'Nombre Completo'")
+	public void dejar_nombre_demasiado_corto() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Bo").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("Hola, buenas tardes").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
+	
+	@When("rellena el formulario poniendo menos de 3 caracteres en el campo 'Email'")
+	public void dejar_email_demasiado_corto() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Bon Jovi").into(By.id("nombre")),
+			Enter.theValue("pr").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("Hola, buenas tardes").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
 
+	@When("rellena el formulario poniendo menos de 3 caracteres en el campo 'Teléfono'")
+	public void dejar_telefono_demasiado_corto() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Bon Jovi").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("27").into(By.id("teléfono")),
+			Enter.theValue("Hola, buenas tardes").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
+	
+	@When("rellena el formulario poniendo menos de 3 caracteres en el campo 'Mensaje'")
+	public void dejar_mensaje_demasiado_corto() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Bon Jovi").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("Ey").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
+	
+	@When("rellena el formulario poniendo más de 300 caracteres en el campo 'Mensaje'")
+	public void dejar_mensaje_demasiado_largo() {
+		OnStage.theActorInTheSpotlight().attemptsTo(
+			Enter.theValue("Bon Jovi").into(By.id("nombre")),
+			Enter.theValue("prueba@prueba.prueba").into(By.id("email")),
+			Enter.theValue("+34 (420) 536-9869").into(By.id("teléfono")),
+			Enter.theValue("Este es un mensaje escrito a mano (por mí mismo, nada menos) "
+					+ "que tiene al menos trescientos caracteres para poder comprobar que, "
+					+ "efectivamente, el método está haciendo su trabajo y detecta la longitud "
+					+ "superior a lo permitido y da un mensaje de advertencia al respecto, impidiendo "
+					+ "que el mensaje sea enviado.").into(By.id("mensaje")),
+			JavaScriptClick.on(By.id("chekedad")),
+			JavaScriptClick.on(By.id("chekedprivacidad"))			
+		);
+	}
+	
 	@When ("ese {actor} hace click en ir a Contacto")
 	public void hace_click_pagina_Contacto(Actor actor) {
 		
@@ -150,6 +236,76 @@ public class ContactoStepDefinitions{
 	
 	@Then("se muestra una alerta sobre mensaje vacío")
 	public void alerta_por_mensaje_vacio() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("mensaje"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("aparece una advertencia sobre aceptar las políticas")
+	public void alerta_de_politicas_de_privacidad() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("chekedprivacidad"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("aparece una advertencia sobre la edad")
+	public void alerta_por_menor_de_edad() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("chekedad"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra un aviso sobre la longitud del nombre")
+	public void alerta_por_nombre_corto() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("nombre"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra un aviso sobre la longitud del email")
+	public void alerta_por_email_corto() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("email"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra un aviso sobre la longitud del teléfono")
+	public void alerta_por_telefono_corto() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("teléfono"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra un aviso sobre la corta longitud del mensaje")
+	public void alerta_por_mensaje_corto() {
+		Actor actor = OnStage.theActorInTheSpotlight();
+		Target username = Target.the("validacion").located(By.id("mensaje"));
+		actor.attemptsTo(
+			Ensure.that(username.resolveFor(actor).getAttribute("validationMessage")).isNotEmpty(),
+			Ensure.thatTheCurrentPage().currentUrl().isEqualTo("https://lucaticenterprise.herokuapp.com/contact.html")
+		);
+	}
+	
+	@Then("se muestra un aviso sobre la excesiva longitud del mensaje")
+	public void alerta_por_mensaje_largo() {
 		Actor actor = OnStage.theActorInTheSpotlight();
 		Target username = Target.the("validacion").located(By.id("mensaje"));
 		actor.attemptsTo(
@@ -214,7 +370,6 @@ public class ContactoStepDefinitions{
 		}
     	
     }
-
 
 	@Then("la página Contacto carga correctamente")
 	public void pagina_Contacto_Carga_Correctamente(){
