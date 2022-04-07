@@ -15,4 +15,10 @@ public class NavigateTo {
         return Task.where("{0} opens the Lucatic Enterprise services page",
                 Open.browserOn().the(LucaServicesPage.class));
     }
+    
+
+    public static Performable theLucaContactPage() {
+        return Task.where("{0} opens the Lucatic Enterprise contact page",
+                Open.browserOn().the(LucaContactPage.class));
+    }
 }
