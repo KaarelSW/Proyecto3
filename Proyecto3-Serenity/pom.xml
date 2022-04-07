@@ -179,7 +179,7 @@
 			</plugin>
 			<plugin>
 				<groupId>net.serenity.maven.plugins</groupId>
-				<artifactId>maven-serenity-plugin</artifactId>
+				<artifactId>serenity-maven-plugin</artifactId>
 				<version>3.2.3</version>
 				<executions>
 					<execution>
