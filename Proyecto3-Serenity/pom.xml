@@ -31,7 +31,7 @@
     	<dependency>
     		<groupId>net.serenity.plugins.jira</groupId>
        		<artifactId>serenity-jira-requirements-provider</artifactId>
-      		<version>xxx</version>
+      		<version>1.12.0</version>
    		</dependency>
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
@@ -180,7 +180,7 @@
 			<plugin>
 				<groupId>net.serenity.maven.plugins</groupId>
 				<artifactId>maven-serenity-plugin</artifactId>
-				<version>xxx</version>
+				<version>3.2.3</version>
 				<executions>
 					<execution>
 						<id>serenity-reports</id>
@@ -194,7 +194,7 @@
 					<dependency>
 						<groupId>net.serenity.plugins.jira</groupId>
 						<artifactId>serenity-jira-requirements-provider</artifactId>
-						<version>xxx</version>
+						<version>1.12.0</version>
 					</dependency>
 				</dependencies>
         </plugin>
